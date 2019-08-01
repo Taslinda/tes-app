@@ -46,50 +46,63 @@ body{
 .form-page-content .btn2{
     margin-left: 1.2em;
 }
+.invalid-feedback{
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    margin-left: 2.5rem;
+
+}
 
 @media (min-width:1024px){
     .form-page-content{
         font-size: 1.3rem;
-        padding: 5px;
-        padding-top: 2rem;
+        padding: 2rem 8rem 0 8rem;
         background-color: #EDF5F8;
         height: 110vh;
     }
     
-    .form-page-content input{
+    .form-page-content .input-text{
         font-size: 1.3rem;
         background-color: #EDF5F8;
-        border: 3px solid #69B5D2; 
+        border: 2px solid #69B5D2; 
         border-radius: 7px;
         color : #69B5D2;
         padding: 1.5rem;
-        margin: 1.5rem auto;
-        width: 70%;
+        width: 92%;
     }
     
     .form-page-content input::-webkit-input-placeholder{
         color : #69B5D2;
         font-style: italic;
+        font-size: 1.2rem;
     }
     
     .form-page-content button{
         background-color: #1BAEC9;
         color: white;
-        padding: 0.8rem;
+        padding: 0.5rem;
         margin-top: 2rem;
-        width: 70%;
-        border-radius: 1rem;
-        font-size: 1.3rem;
+        width: 92%;
+        border-radius: 5px;
+        font-size: 1.2rem;
     }
     
     .form-page-content label{
         display: block !important;
         text-align: left;
-        margin-left: 9.5rem;
+        margin-bottom: -1rem;
     }
     
     .form-page-content .btn2{
-        margin-left: 15%;
+        margin-left: 4%;
+    }
+    .invalid-feedback{
+        margin-top: -1rem;
+        margin-bottom: 1.5rem;
+        text-align: left;
+        margin-left: 2.2rem;
+
     }
 }
 
@@ -97,28 +110,34 @@ body{
     .form-page-content{
         width: 35%;
         font-size: 1rem;
-        padding: 1rem;
-        padding-top: 3rem;
+        padding : 2rem 0 0 2rem;
         background-color: #EDF5F8;
-        height: 85vh;
+        height: 111vh !important;
         margin: 2.8rem auto;
         border-radius: 10px;
         box-shadow: 0px 5px 20px 2px rgba(173, 171, 171, 0.8);
     }
     
-    .form-page-content input{
+    .form-page-content .input-text{
         font-size: 14px;
         background-color: #EDF5F8;
         border: 2px solid #69B5D2; 
         border-radius: 3px;
         color : #69B5D2;
         padding: 1rem !important;
-        width: 88%;
+        width: 120%;
+        margin-left: 0rem;
+        margin-right: -5rem;
+    }
+
+    .invalid-feedback{
+        margin-top: -1rem;
+        margin-bottom: 1.5rem;
     }
     
-    .form-page-content input::-webkit-input-placeholder{
+    .form-page-content .input-text::-webkit-input-placeholder{
         color : #69B5D2;
-        font-style: italic;
+        font-style: italic; 
     }
     
     .form-page-content button{
@@ -126,19 +145,25 @@ body{
         color: white;
         padding: 0.5rem;
         margin-top: 1.5rem;
-        width: 88%;
+        margin-left: -2.2rem !important;
+        width: 92%;
         border-radius: 5px;
         font-size: 15px;
     }
     
     .form-page-content label{
         text-align: left;
-        margin-left: 1.7rem;
-        line-height: 0;
+        margin-left: 0rem;
+        margin-bottom: -1rem;
+        font-size: 1rem;
     }
     .form-page-content .btn2{
-        width: 88%;
-        margin-left: 6%;
+        width: 92%;
+        margin-left: 0rem !important;
+    }
+
+    .form-page-group{
+        text-align: left;
     }
 }
 
