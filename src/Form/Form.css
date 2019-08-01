@@ -3,12 +3,7 @@ body{
 }
 
 
-
-/* NAVBAR */
-
-
 /* FORM CONTENT */
-@media (min-width:600px){
 .form-page-content{
     font-size: 2.2rem;
     padding: 5px;
@@ -37,7 +32,7 @@ body{
     color: white;
     padding: 1rem;
     margin-top: 3.5rem;
-    width: 80%;
+    width: 92%;
     border-radius: 1rem;
     font-size: 2rem;
 }
@@ -49,18 +44,63 @@ body{
 }
 
 .form-page-content .btn2{
-    margin-left: 3.5em;
-}
+    margin-left: 1.2em;
 }
 
 @media (min-width:1024px){
     .form-page-content{
-        width: 30%;
+        font-size: 1.3rem;
+        padding: 5px;
+        padding-top: 2rem;
+        background-color: #EDF5F8;
+        height: 110vh;
+    }
+    
+    .form-page-content input{
+        font-size: 1.3rem;
+        background-color: #EDF5F8;
+        border: 3px solid #69B5D2; 
+        border-radius: 7px;
+        color : #69B5D2;
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+        width: 70%;
+    }
+    
+    .form-page-content input::-webkit-input-placeholder{
+        color : #69B5D2;
+        font-style: italic;
+    }
+    
+    .form-page-content button{
+        background-color: #1BAEC9;
+        color: white;
+        padding: 0.8rem;
+        margin-top: 2rem;
+        width: 70%;
+        border-radius: 1rem;
+        font-size: 1.3rem;
+    }
+    
+    .form-page-content label{
+        display: block !important;
+        text-align: left;
+        margin-left: 9.5rem;
+    }
+    
+    .form-page-content .btn2{
+        margin-left: 15%;
+    }
+}
+
+@media (min-width:1280px){
+    .form-page-content{
+        width: 35%;
         font-size: 1rem;
         padding: 1rem;
         padding-top: 3rem;
         background-color: #EDF5F8;
-        height: 80vh;
+        height: 85vh;
         margin: 2.8rem auto;
         border-radius: 10px;
         box-shadow: 0px 5px 20px 2px rgba(173, 171, 171, 0.8);
@@ -73,6 +113,7 @@ body{
         border-radius: 3px;
         color : #69B5D2;
         padding: 1rem !important;
+        width: 88%;
     }
     
     .form-page-content input::-webkit-input-placeholder{
@@ -85,7 +126,7 @@ body{
         color: white;
         padding: 0.5rem;
         margin-top: 1.5rem;
-        width: 30%;
+        width: 88%;
         border-radius: 5px;
         font-size: 15px;
     }
@@ -95,9 +136,9 @@ body{
         margin-left: 1.7rem;
         line-height: 0;
     }
-    
     .form-page-content .btn2{
-        margin-left:33%;
+        width: 88%;
+        margin-left: 6%;
     }
 }
 

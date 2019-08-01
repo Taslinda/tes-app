@@ -59,7 +59,7 @@ const Styles = styled.div`
     border-radius:5px;
     background:#005083;
     outline:none;
-    margin-left:-4.5em;
+    margin-left:-1.5em;
 
     &::-webkit-slider-thumb{
         -webkit-appearance:none;

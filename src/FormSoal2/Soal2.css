@@ -191,7 +191,6 @@
         transform: scale(1);
       }
 }
-
 @media (min-width:1024px){
     .soal2-box{
         width: 500px;
@@ -206,24 +205,24 @@
     }
     
     .soal2-box .save-button{
-        width: 7rem;
+        width: 150px;
         background-color: #1BAEC9;
         color: white;
         padding: 12px;
-        margin-top: 2rem; 
+        margin-top: 2.3rem; 
         border-radius: 5px;
         font-size: 1rem;
         box-shadow: 0px 5px 20px 2px rgba(173, 171, 171, 0.8);
         border: none;
-        margin-right: -13em;
+        margin-right: -5em;
     }
     
     
     .soal2-box .soal-text2{
         font-size: 20px;
-        margin-top: -4em;
-        margin-left: -6em;
-        margin-right: -6em;
+        margin-top: 0em;
+        margin-left: -3em;
+        margin-right: -3em;
     }
     
     .soal2-box .checkbox-button{
@@ -236,15 +235,199 @@
         background-color: rgba(208, 235, 252, 0.48);
         position: relative;
     }
-    .grid2{
-        margin-top: 10px;
+    .wrapper{
+        margin-right: -5rem;
     }
+     .grid2{
+        margin-top: 0.5rem;
+    }/*
     .grid2, .grid4, .grid6{
         margin-right: -3em;
-    }
+    }*/
     .grid5{
         margin-left: -3.1em;
+    } 
+    .icon-quote{
+        width: 120px !important;
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        animation: shake 2s;
+        animation-iteration-count: infinite;
     }
+    
+    .btn-in-decrement{
+        width: 35px;
+        height: 35px;
+        background-color: #1BAEC9;
+        border:0;
+        border-radius: 50%;
+        line-height: 31px;
+        font-size: 15px;
+        color: white;
+        font-weight: bold;
+        display: inline-block;
+    }
+    
+    .text-in-decrement{
+       display: inline-block;
+       font-size: 1.2rem;
+       width: 30px;
+       line-height: 1.5;
+       border-bottom: 1px solid black;
+       margin-left: 5px;
+       margin-right: 5px;
+    }
+    
+    .wrapper{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        line-height: 0.2;
+    }
+    
+    @keyframes shake {
+        0%{ 
+            transform: translate(1px, 1px) rotate(-5deg); 
+        }
+        50%{ 
+            transform: translate(-5px, -5px) rotate(10deg); 
+        }
+        100%{
+            transform: translate(1px, 1px) rotate(-5deg); 
+        }
+    }
+    
+    /* Checkbox Style */
+    .checkbox-button {
+        cursor: pointer;
+      }
+      .checkbox-button3 {
+        cursor: pointer;
+      }
+      
+    .soal2-options input[type=checkbox] {
+          box-sizing: border-box;
+          padding: 0;
+      }
+      
+    .soal2-options input {
+          font-size: 1rem;
+          line-height: 1.5;
+          padding: 11px 23px;
+          border: 1px solid rgba(0,0,0,.15);
+          border-radius: 0;
+          outline: 0;
+          background-color: transparent;
+      }
+      
+      .checkbox-button__input {
+          opacity: 0;
+          position: absolute;
+      }
+      .checkbox-button__label{
+          font-size: 1rem;
+      }
+      
+      .checkbox-button__control {
+          position: relative;
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          vertical-align: middle;
+          background-color: inherit;
+          color: #017b5f;
+          border: 2px solid #666;
+          border-radius: 10px;
+          margin-left: -3em;
+          top:5px;
+      }
+      
+      .checkbox-button__input:checked+.checkbox-button__control:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          width: 15px;
+          height: 15px;
+          background-color: #01a982;
+          border-radius: 50%;
+      }
+      
+      .checkbox-button__input:checked+.checkbox-button__control {
+          border-color: #01a982;
+      }
+      
+      .checkbox-button__control {
+        transform: scale(0.75);
+      }
+      
+      @keyframes animasiBox{
+        from {
+            transform: scale(0);
+          }
+          to {
+            transform: scale(1);
+          }
+    }
+}
+@media (min-width:1280px){
+    .soal2-box{
+        width: 500px;
+        height: 500px;
+        background-color: white;
+        box-shadow: 0px 5px 100px 1px rgba(100, 142, 209, 0.5);
+        border-radius: 1rem;
+        position: relative;
+        top:20%;
+        animation: animasiBox .5s;
+        margin: auto;
+    }
+    
+    .soal2-box .save-button{
+        width: 150px;
+        background-color: #1BAEC9;
+        color: white;
+        padding: 12px;
+        margin-top: 2rem; 
+        border-radius: 5px;
+        font-size: 1rem;
+        box-shadow: 0px 5px 20px 2px rgba(173, 171, 171, 0.8);
+        border: none;
+        margin-right: -7em;
+    }
+    
+    
+    .soal2-box .soal-text2{
+        font-size: 20px;
+        margin-top: -1em;
+        margin-left: -5em;
+        margin-right: -5em;
+    }
+    
+    .soal2-box .checkbox-button{
+        margin: 10px;
+    }
+    
+    .background-opc{
+        width:100%;
+        height: 100vh;
+        background-color: rgba(208, 235, 252, 0.48);
+        position: relative;
+    }
+    .wrapper{
+        margin-right: -5rem;
+    }
+     .grid2{
+        margin-top: 1rem;
+    }/*
+    .grid2, .grid4, .grid6{
+        margin-right: -3em;
+    }*/
+    .grid5{
+        margin-left: -3.1em;
+    } 
     .icon-quote{
         width: 220px;
         position: absolute;

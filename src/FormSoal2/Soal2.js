@@ -60,7 +60,6 @@ class Soal2 extends Component{
           <div className="soal2-box">
             <p className="soal-text2">Apa jenis kecacatan yang dialami anggota keluarga dan berapa banyak yang menderita kecacatan ?</p>   
             <div className="wrapper">
-
               <div className="grid1">
                 <label className="checkbox-button">
                     <input onClick={this.ToggleClick} type="checkbox" className="checkbox-button__input" id="choice1-1" name="choice1"/>

@@ -20,7 +20,7 @@ class Form1 extends Component{
             <label htmlFor="">Kabupaten/Kota</label>
             <input 
               type="text" 
-              className="form-control col-sm-11"
+              className="form-control col-sm-11 col-sm-6"
               placeholder="Kabupaten/Kota"
             />
           </div>

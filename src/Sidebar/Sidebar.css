@@ -123,6 +123,143 @@
   }
 
   @media (min-width:1024px){
+    /* Position and sizing of burger button */
+    /* .bm-burger-button {
+        position: fixed;
+        width: 36px;
+        height: 30px;
+        left: 36px;
+        top: 36px;
+      } */
+      
+      /* Color/shape of burger icon bars */
+      /* .bm-burger-bars {
+        background: #373a47;
+      } */
+      
+      /* Color/shape of burger icon bars on hover*/
+      /* .bm-burger-bars-hover {
+        background: #a90000;
+      }
+       */
+      /* Position and sizing of clickable cross button */
+      .bm-cross-button {
+        height: 24px;
+        width: 24px;
+      }
+      
+      /* Color/shape of close button cross */
+      .bm-cross {
+        background: #bdc3c7;
+      }
+    
+      .close-button{
+        width: 30px;
+        float:right;
+        margin-top: -6%;
+      }
+      
+      /*
+      Sidebar wrapper styles
+      Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+      */
+      .bm-menu-wrap {
+        position: fixed;
+        margin-left: -2.3rem;
+        margin-top: 4vh;
+      }
+      
+      /* General sidebar styles */
+      .bm-menu {
+        background: #1277B0;
+        /* padding: 2.5em 1.5em 0; */
+        font-size: 1.15em;
+        width: 55%;
+        height: 102vh !important;
+        margin-left: 0.1rem;
+        padding-left: 3rem;
+        padding-top: 2rem;
+      }
+      
+      /* Morph shape necessary with bubble or elastic */
+      .bm-morph-shape {
+        fill: #373a47;
+      }
+      
+      /* Wrapper for item list */
+      /* .bm-item-list {
+        color: white;
+        padding: 0.8em;
+        text-align: left;
+      } */
+      
+      /* Individual item */
+      /* .bm-item {
+        display: inline-block;
+        color: white;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 25px;
+        line-height: 1.5em;
+      } */
+      
+      /* Styling of overlay */
+      .bm-overlay {
+        background: rgba(0, 0, 0, 0.3);
+        height: 102vh !important;
+      }
+    
+      .list-options{
+          color: white;
+          font-family: 'PT Sans', sans-serif;
+          font-size: 16px;
+          line-height: 1.8em;
+          display: inline-block;
+          text-align: left;
+      }
+      .list-options:hover{
+        color: white;
+    }
+      .list-options2{
+        color: white;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 16px;
+        line-height: 1.8em;
+        display: inline-block;
+        text-align: left;
+        margin-left: 8%;
+    }
+    .list-options2:hover{
+      color: white;
+    }
+    
+      .sidebar-title{
+        color: white;
+        text-align: left;
+        font-size: 1.5rem;
+      }
+    
+      .sidebar-menu .title-underline{
+        width: 75%;
+        border-bottom: 0.5px solid white;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+    
+      .logout{
+        font-size: 16px;
+        color: white;
+        margin-top: 52vh;
+        text-align: left;
+      }
+      .logout:hover{
+        color: midnightblue;
+        text-decoration: none;
+      }
+    
+      }
+    
+
+  @media (min-width:1280px){
 /* Position and sizing of burger button */
 /* .bm-burger-button {
     position: fixed;
@@ -166,7 +303,7 @@
   .bm-menu-wrap {
     position: fixed;
     margin-left: -2.3rem;
-    margin-top: 10vh;
+    margin-top: 6vh;
   }
   
   /* General sidebar styles */
@@ -174,7 +311,7 @@
     background: #1277B0;
     /* padding: 2.5em 1.5em 0; */
     font-size: 1.15em;
-    width: 40%;
+    width: 55%;
     height: 102vh !important;
     margin-left: 0.1rem;
     padding-left: 3rem;
