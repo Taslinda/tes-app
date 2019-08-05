@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import NavigationBar from '../Navbar/Navbar'
+import { withRouter } from 'react-router-dom';
 import { ValidationForm, TextInput} from "react-bootstrap4-form-validation";
 class Form1 extends Component{
   constructor(props){
@@ -17,7 +18,8 @@ class Form1 extends Component{
     handleSubmit = (e, formData, inputs) => {
         e.preventDefault();
         console.log(formData);
-        alert(JSON.stringify(formData, null, 2));
+        this.props.history.push('/soal');
+        // alert(JSON.stringify(formData, null, 2));
     }
 
     handleErrorSubmit = (e,formData, errorInputs) => {
@@ -38,7 +40,7 @@ class Form1 extends Component{
             <TextInput 
               type="text" 
               name="kepalaRt"
-              className="form-control col-sm-11 input-text" 
+              className="form-control col-sm-11 input-text2" 
               placeholder="Nama"
               required
             />
@@ -48,7 +50,7 @@ class Form1 extends Component{
             <TextInput 
               type="text" 
               name="kk"
-              className="form-control col-sm-11 input-text"
+              className="form-control col-sm-11 input-text2"
               placeholder="00"
               required
             />
@@ -58,7 +60,7 @@ class Form1 extends Component{
             <TextInput 
               type="text" 
               name="anggota"
-              className="form-control col-sm-11 input-text"
+              className="form-control col-sm-11 input-text2"
               placeholder="00"
               required
             />
@@ -68,13 +70,13 @@ class Form1 extends Component{
             <TextInput 
               type="text" 
               name="balita"
-              className="form-control col-sm-11 input-text"
+              className="form-control col-sm-11 input-text2"
               placeholder="00"
               required
             />
           </div>
           <div className="form-group">
-            <button className="btn2 primary btn">SIMPAN</button>
+            <button type="submit" className="btn2 primary btn">SIMPAN</button>
           </div>
         </div>
         </ValidationForm>
@@ -83,5 +85,5 @@ class Form1 extends Component{
   }
 }
 
-export default Form1;
+export default withRouter(Form1);
 

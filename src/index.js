@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Login from './SignIn/SignIn'
+import SignUp from './SignUp/SignUp'
 import App from './App';
 import Form2 from './Form/Form2'
 import Soal from './FormSoal/Soal'
@@ -14,7 +16,9 @@ import { Route, BrowserRouter as Router } from 'react-router-dom'
 const routing = (
     <Router>
       <div>
-        <Route exact path="/form1" component={App} />
+        <Route exact path="/" component={Login} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/form1" component={App} />
         <Route path="/form2" component={Form2} />
         <Route path="/soal" component={Soal} />
         <Route path="/soal2" component={Soal2} />

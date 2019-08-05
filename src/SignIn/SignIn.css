@@ -1,0 +1,323 @@
+.login-form {
+    background-image: url(../SignUp/background.png);
+    background-color: #005083;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background-repeat: no-repeat;
+    position: fixed;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.username-login, .password-login{
+    margin: 10px;
+}
+.is-danger-login{
+    font-size: 1.5rem;
+    color:white;
+    margin-top: 7px;
+}
+
+.title-login p{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: #ffffff;
+    font-size: 6.5rem;
+    margin-bottom: 0.5rem;
+}
+.title-login{
+    margin-top: 12rem !important;
+    margin-left: 11em !important;
+}
+
+.form-group-login {
+    margin-top: 16em;
+    text-align: left;
+    margin-left: 10rem;
+}
+
+.form-group-login input {
+    width: 40rem !important;
+    height: 7rem !important;
+    padding-left: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem !important;
+    font-weight: 300;
+    color: #0C3265;
+    border: none;
+}
+.form-group-login input::-webkit-input-placeholder {
+    color:#005083;
+    font-size: 1.8rem !important;
+}
+
+.lupa-sandi p {
+    color: #ffffff;
+    margin-left: 28rem !important;
+    margin-top: 0.75rem;
+    font-size: 1.6rem;
+    opacity: .8;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.login button {
+    margin-top: 7rem !important;
+    margin-left: 0.5rem !important;
+    width: 40rem;
+    height: 6rem;
+    border: none;
+    background-color: #1BAEC9;
+    font-size: 2rem;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border:none;
+    border-radius: 10px;
+}
+
+.regis p {
+    color: #ffffff;
+    margin-left: 1rem !important;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0.75rem;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+@media (min-width:1024px){
+
+    .login-app {
+        background-image: url(../SignUp/background.png);
+        opacity: 20%;
+        width: 100%;
+        height: 100vh;
+        padding-top: 2.5rem;
+        background-repeat: no-repeat;
+        position: relative;
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: cover;
+    }
+    
+    .login-form {
+        background: url(../SignUp/background.png);
+        background-color: #005083;
+        width: 30rem;
+        height: 50rem;
+        margin-top: 2rem !important;
+        margin-bottom: 3.5rem;
+        margin-left:18rem;
+        position: absolute;
+        background-size: cover;
+    }
+    .username-login, .password-login{
+        margin: 10px;
+    }
+    .is-danger-login{
+        font-size: 12px;
+        margin-top: 2px;
+        color:white;
+        margin-left: -1rem;
+    }
+    /* .username::-webkit-input-placeholder{
+        padding: 1rem;
+        color: #005083;
+    }
+    .password::-webkit-input-placeholder{
+        padding: 1rem;
+        color: #005083;
+    } */
+    
+    
+    .title-login {
+      margin-top: 6em !important;
+      margin-left: 5em !important;
+    }
+    .title-login p{
+        font-size: 3rem;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        color: #ffffff;
+    }
+    
+    .form-group-login {
+        margin-top: 7rem;
+        text-align: left;
+        margin-left: 5rem;
+    }
+    
+    .form-group-login input {
+        width: 21rem !important;
+        height: 3rem !important;
+        margin-left: -1rem;
+        padding-left: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px !important;
+        font-weight: 300;
+        color: #0C3265;
+        border: none;
+        margin-bottom: -8px !important;
+    }
+    .form-group-login input::-webkit-input-placeholder {
+        padding-left: 5px !important;
+        color:#005083;
+        font-size: 12px !important;
+    }
+    
+    .lupa-sandi p {
+        color: #ffffff;
+        margin-left: 14.5rem !important;
+        margin-top: 0.75rem;
+        font-size: 0.75rem;
+        opacity: .8;
+    
+    }
+    
+    .login button {
+        margin-top: 3rem !important;
+        margin-left: -0.4rem !important;
+        width: 21rem;
+        height: 3rem;
+        border: none;
+        background-color: #1BAEC9;
+        font-size: 16px;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        border:none;
+        border-radius: 5px;
+    }
+    
+    .regis p {
+        color: #ffffff;
+        margin-left: -0.3rem !important;
+        font-size: 11px;
+        margin-top: 0.75rem;
+    }
+    
+    .text-bold{
+        font-weight: bold;
+    }
+    
+    
+    }
+@media (min-width:1280px){
+
+.login-app {
+    background-image: url(../SignUp/background.png);
+    opacity: 20%;
+    width: 100%;
+    height: 100vh;
+    padding-top: 2.5rem;
+    background-repeat: no-repeat;
+    position: fixed;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+.login-form {
+    background: url(../SignUp/background.png);
+    background-color: #005083;
+    width: 24rem;
+    height: 44.5rem;
+    margin-top: 4rem !important;
+    margin-bottom: 3.5rem;
+    margin-left:32rem;
+    background-size: cover;
+}
+.username-login, .password-login{
+    margin: 10px;
+}
+
+.is-danger-login{
+    font-size: 12px;
+    color:white;
+    margin-left: -2rem;
+    margin-top: 10px;
+}
+/* .username::-webkit-input-placeholder{
+    padding: 1rem;
+    color: #005083;
+}
+.password::-webkit-input-placeholder{
+    padding: 1rem;
+    color: #005083;
+} */
+
+
+.title-login {
+    margin-top: 4rem !important;
+    text-align: left !important;
+    margin-left: 4rem !important;
+}
+.title-login p{
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: #ffffff;
+}
+
+.form-group-login {
+    margin-top: 5.5rem !important;
+}
+
+.form-group-login input {
+    width: 17rem !important;
+    height: 3rem !important;
+    margin-left: -2.2rem;
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px !important;
+    font-weight: 300;
+    color: #0C3265;
+    border: none;
+    margin-bottom: -8px;
+}
+.form-group-login input::-webkit-input-placeholder {
+    padding-left: 5px;
+    color:#005083;
+    font-size: 12px !important;
+}
+
+.lupa-sandi p {
+    color: #ffffff;
+    margin-left: 9.5rem !important;
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    opacity: .8;
+
+}
+
+.login button {
+    margin-top: 1rem !important;
+    margin-left: -1.7rem !important;
+    width: 17rem;
+    height: 3rem;
+    border: none;
+    background-color: #1BAEC9;
+    font-size: 13px;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    border:none;
+    border-radius: 5px;
+}
+
+.regis p {
+    color: #ffffff;
+    margin-left: -1.5rem !important;
+    font-size: 11px;
+    margin-top: 0.75rem;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+
+}

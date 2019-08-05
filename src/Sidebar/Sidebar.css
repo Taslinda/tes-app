@@ -31,7 +31,7 @@
   .close-button{
     width: 40px;
     float:right;
-    margin-top: -9%;
+    margin-top: -6%;
     margin-right: 5%;
   }
   
@@ -49,11 +49,13 @@
     background: #1277B0;
     /* padding: 2.5em 1.5em 0; */
     font-size: 1.15em;
-    width: 110%;
+    width: 50vh;
+    height: 110% !important;
     margin-top: -12%;
-    margin-left: -16%;
-    padding-left: 6rem;
-    padding-top: 3rem;
+    padding-top: 7rem;
+    position: absolute;
+    margin-left: -5rem;
+    padding-left: 5rem;
   }
   
   /* Morph shape necessary with bubble or elastic */
@@ -62,11 +64,11 @@
   }
   
   /* Wrapper for item list */
-  /* .bm-item-list {
+  .bm-item-list {
     color: white;
     padding: 0.8em;
     text-align: left;
-  } */
+  }
   
   /* Individual item */
   /* .bm-item {
@@ -87,7 +89,7 @@
   .list-options{
       color: white;
       font-family: 'PT Sans', sans-serif;
-      font-size: 25px;
+      font-size: 2.5rem;
       line-height: 1.8em;
       display: inline-block;
       text-align: left;
@@ -95,7 +97,7 @@
   .list-options2{
     color: white;
     font-family: 'PT Sans', sans-serif;
-    font-size: 25px;
+    font-size: 2.4rem;
     line-height: 1.8em;
     display: inline-block;
     text-align: left;
@@ -105,12 +107,12 @@
   .sidebar-title{
     color: white;
     text-align: left;
-    font-size: 2.3rem;
+    font-size: 3.2rem;
   }
 
   .sidebar-menu .title-underline{
-    width: 80%;
-    border-bottom: 0.5px solid white;
+    width: 85%;
+    border-bottom: 3px solid white;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
@@ -118,7 +120,7 @@
   .logout{
     font-size: 35px;
     color: white;
-    margin-top: 62vh;
+    margin-top: 43vh !important;
     text-align: left;
   }
 
@@ -174,11 +176,11 @@
         background: #1277B0;
         /* padding: 2.5em 1.5em 0; */
         font-size: 1.15em;
-        width: 55%;
-        height: 102vh !important;
+        width: 65%;
+        height: 104vh !important;
         margin-left: 0.1rem;
-        padding-left: 3rem;
-        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-top: 4rem;
       }
       
       /* Morph shape necessary with bubble or elastic */
@@ -211,8 +213,8 @@
       .list-options{
           color: white;
           font-family: 'PT Sans', sans-serif;
-          font-size: 16px;
-          line-height: 1.8em;
+          font-size: 1.3rem;
+          line-height: 2em;
           display: inline-block;
           text-align: left;
       }
@@ -222,7 +224,7 @@
       .list-options2{
         color: white;
         font-family: 'PT Sans', sans-serif;
-        font-size: 16px;
+        font-size: 1.2rem;
         line-height: 1.8em;
         display: inline-block;
         text-align: left;
@@ -235,20 +237,20 @@
       .sidebar-title{
         color: white;
         text-align: left;
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
     
       .sidebar-menu .title-underline{
-        width: 75%;
-        border-bottom: 0.5px solid white;
+        width: 80%;
+        border-bottom: 1px solid white;
         margin-top: 2rem;
         margin-bottom: 2rem;
       }
     
       .logout{
-        font-size: 16px;
+        font-size: 1.2rem;
         color: white;
-        margin-top: 52vh;
+        margin-top: 35vh;
         text-align: left;
       }
       .logout:hover{
@@ -293,7 +295,7 @@
   .close-button{
     width: 30px;
     float:right;
-    margin-top: -6%;
+    margin-top: -7%;
   }
   
   /*
@@ -311,11 +313,11 @@
     background: #1277B0;
     /* padding: 2.5em 1.5em 0; */
     font-size: 1.15em;
-    width: 55%;
-    height: 102vh !important;
+    width: 45% !important;
+    height: 105vh !important;
     margin-left: 0.1rem;
-    padding-left: 3rem;
-    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-top: 6rem;
   }
   
   /* Morph shape necessary with bubble or elastic */
@@ -348,7 +350,7 @@
   .list-options{
       color: white;
       font-family: 'PT Sans', sans-serif;
-      font-size: 16px;
+      font-size: 1.3rem;
       line-height: 1.8em;
       display: inline-block;
       text-align: left;
@@ -359,7 +361,7 @@
   .list-options2{
     color: white;
     font-family: 'PT Sans', sans-serif;
-    font-size: 16px;
+    font-size: 1.1rem;
     line-height: 1.8em;
     display: inline-block;
     text-align: left;
@@ -372,13 +374,13 @@
   .sidebar-title{
     color: white;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .sidebar-menu .title-underline{
     width: 75%;
-    border-bottom: 0.5px solid white;
-    margin-top: 2rem;
+    border-bottom: 3px solid white;
+    margin-top: 1rem;
     margin-bottom: 2rem;
   }
 

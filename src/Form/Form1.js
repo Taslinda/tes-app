@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Form.css';
+import { withRouter } from 'react-router-dom';
 import NavigationBar from '../Navbar/Navbar';
 import { ValidationForm, TextInput} from "react-bootstrap4-form-validation";
 class Form1 extends Component{
@@ -13,23 +14,26 @@ class Form1 extends Component{
         setFocusOnError:true,
         clearInputOnReset:false
     }
+    
   }
 
   handleSubmit = (e, formData, inputs) => {
       e.preventDefault();
       console.log(formData);
-      alert(JSON.stringify(formData, null, 2));
+      this.props.history.push('/form2');
+      // alert(JSON.stringify(formData, null, 2));
   }
 
   handleErrorSubmit = (e,formData, errorInputs) => {
-      console.log(e,formData, errorInputs)
+      console.log(e,formData, errorInputs);
   }
 
   render(){
     return(
       <div>
         <NavigationBar navbartitle="Pengenalan Tempat"/>
-        <ValidationForm onSubmit={this.handleSubmit} onErrorSubmit={this.handleErrorSubmit}
+        <ValidationForm onSubmit={this.handleSubmit.bind(this)} 
+                        onErrorSubmit={this.handleErrorSubmit}
                         ref={this.formRef}
                         immediate={this.state.immediate}
                         setFocusOnError={this.state.setFocusOnError}
@@ -106,7 +110,7 @@ class Form1 extends Component{
             />
           </div>
           <div className="form-group">
-            <button className="btn primary">SIMPAN</button>
+            <button type="submit" className="btn primary">SIMPAN</button>
           </div>
         </div>
         </ValidationForm>
@@ -115,5 +119,5 @@ class Form1 extends Component{
   }
 }
 
-export default Form1;
+export default withRouter(Form1);
 

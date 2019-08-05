@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+  import React, {Component} from 'react';
 import NavigationBar from '../Navbar/Navbar'
 import {Link} from 'react-router-dom';
 import bgImage from '../asset/background.png';

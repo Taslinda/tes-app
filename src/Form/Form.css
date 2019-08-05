@@ -6,13 +6,12 @@ body{
 /* FORM CONTENT */
 .form-page-content{
     font-size: 2.2rem;
-    padding: 5px;
     padding-top: 2rem;
     background-color: #EDF5F8;
-    height: 100vh;
+    height: 115vh;
 }
 
-.form-page-content input{
+.form-page-content .input-text{
     font-size: 2rem;
     background-color: #EDF5F8;
     border: 3px solid #69B5D2; 
@@ -22,7 +21,21 @@ body{
     margin: 1.5rem auto;
 }
 
-.form-page-content input::-webkit-input-placeholder{
+.form-page-content .input-text::-webkit-input-placeholder{
+    color : #69B5D2;
+    font-style: italic;
+}
+.form-page-content .input-text2{
+    font-size: 2rem;
+    background-color: #EDF5F8;
+    border: 3px solid #69B5D2; 
+    border-radius: 7px;
+    color : #69B5D2;
+    padding: 2.5rem;
+    margin: 1.5rem auto;
+}
+
+.form-page-content .input-text2::-webkit-input-placeholder{
     color : #69B5D2;
     font-style: italic;
 }
@@ -49,17 +62,16 @@ body{
 .invalid-feedback{
     margin-top: -1rem;
     margin-bottom: 1.5rem;
-    text-align: left;
-    margin-left: 2.5rem;
-
+    text-align: center;
+    margin-left: -10.5em;
 }
 
 @media (min-width:1024px){
     .form-page-content{
         font-size: 1.3rem;
-        padding: 2rem 8rem 0 8rem;
+        /* padding: 2rem 8rem 0 8rem; */
         background-color: #EDF5F8;
-        height: 110vh;
+        height: 130vh;
     }
     
     .form-page-content .input-text{
@@ -71,8 +83,23 @@ body{
         padding: 1.5rem;
         width: 92%;
     }
+    .form-page-content .input-text2{
+        font-size: 1.3rem;
+        background-color: #EDF5F8;
+        border: 2px solid #69B5D2; 
+        border-radius: 7px;
+        color : #69B5D2;
+        padding: 1.5rem;
+        width: 92%;
+    }
     
-    .form-page-content input::-webkit-input-placeholder{
+    .form-page-content .input-text::-webkit-input-placeholder{
+        color : #69B5D2;
+        font-style: italic;
+        font-size: 1.2rem;
+    }
+    
+    .form-page-content .input-text2::-webkit-input-placeholder{
         color : #69B5D2;
         font-style: italic;
         font-size: 1.2rem;
@@ -90,8 +117,8 @@ body{
     
     .form-page-content label{
         display: block !important;
-        text-align: left;
-        margin-bottom: -1rem;
+        margin-bottom: -1rem !important;
+        margin-left: 2.8rem;
     }
     
     .form-page-content .btn2{
@@ -100,8 +127,8 @@ body{
     .invalid-feedback{
         margin-top: -1rem;
         margin-bottom: 1.5rem;
-        text-align: left;
-        margin-left: 2.2rem;
+        text-align: center;
+        margin-left: -22.8em !important;
 
     }
 }
@@ -112,7 +139,7 @@ body{
         font-size: 1rem;
         padding : 2rem 0 0 2rem;
         background-color: #EDF5F8;
-        height: 111vh !important;
+        height: 105vh !important;
         margin: 2.8rem auto;
         border-radius: 10px;
         box-shadow: 0px 5px 20px 2px rgba(173, 171, 171, 0.8);
@@ -129,15 +156,35 @@ body{
         margin-left: 0rem;
         margin-right: -5rem;
     }
+    .form-page-content .input-text2{
+        font-size: 14px;
+        background-color: #EDF5F8;
+        border: 2px solid #69B5D2; 
+        border-radius: 3px;
+        color : #69B5D2;
+        padding: 1rem !important;
+        width: 120%;
+        margin-left: 0rem;
+        margin-right: -5rem;
+    }
+
 
     .invalid-feedback{
         margin-top: -1rem;
         margin-bottom: 1.5rem;
+        text-align: center !important;
+        margin-left: -8.75rem !important;
     }
     
     .form-page-content .input-text::-webkit-input-placeholder{
         color : #69B5D2;
         font-style: italic; 
+        font-size:12px;
+    }
+    .form-page-content .input-text2::-webkit-input-placeholder{
+        color : #69B5D2;
+        font-style: italic; 
+        font-size:12px;
     }
     
     .form-page-content button{

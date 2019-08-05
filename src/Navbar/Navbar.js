@@ -9,7 +9,7 @@ class NavigationBar extends Component{
     render(){
         return(
             <Navbar className="form-page-navbar">
-                <Sidebar/>
+                <Sidebar sidtitle={this.props.navbartitle}></Sidebar>
                 <img src={menu} alt="" className="menu-style"/>
                 <h5 className="form-page-brand" href="#home">{this.props.navbartitle}</h5>
             </Navbar>
