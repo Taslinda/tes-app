@@ -124,6 +124,77 @@
     text-align: left;
   }
 
+  @media (min-width:900px){
+    .bm-menu-wrap {
+      position: fixed;
+      margin-left: -2.3rem;
+      margin-top: 4vh;
+    }
+    
+    /* General sidebar styles */
+    .bm-menu {
+      background: #1277B0;
+      /* padding: 2.5em 1.5em 0; */
+      font-size: 1.15em;
+      width: 65%;
+      height: 104vh !important;
+      margin-left: 0.1rem;
+      padding-left: 1.5rem;
+      padding-top: 3rem;
+    }
+    .list-options{
+      color: white;
+      font-family: 'PT Sans', sans-serif;
+      font-size: 1.3rem;
+      line-height: 2em;
+      display: inline-block;
+      text-align: left;
+  }
+  .list-options:hover{
+    color: white;
+}
+  .list-options2{
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8em;
+    display: inline-block;
+    text-align: left;
+    margin-left: 8%;
+}
+.list-options2:hover{
+  color: white;
+}
+
+  .sidebar-title{
+    color: white;
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  .sidebar-menu .title-underline{
+    width: 80%;
+    border-bottom: 1px solid white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .logout{
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 35vh;
+    text-align: left;
+  }
+  .logout:hover{
+    color: midnightblue;
+    text-decoration: none;
+  }
+  .close-button{
+    width: 30px;
+    float:right;
+    margin-top: -6%;
+  }
+  } 
   @media (min-width:1024px){
     /* Position and sizing of burger button */
     /* .bm-burger-button {

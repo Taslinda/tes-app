@@ -15,9 +15,9 @@ const sliderThumbStyles = (props) => (`
   cursor:pointer;
   background-color:#1BAEC9;
   border-radius: 50%;
-  @media (min-width:1024px){
-    width: 20px;
-    height:20px;
+  @media (min-width:900px){
+    width: 25px;
+    height:25px;
     cursor:pointer;
     background-color:#1BAEC9;
     border-radius: 50%;
@@ -47,7 +47,7 @@ const Styles = styled.div`
     }
   }
 
-  @media (min-width:1024px){
+  @media (min-width:900px){
     align-items:center;
     color:#333;
   
@@ -59,7 +59,7 @@ const Styles = styled.div`
     border-radius:5px;
     background:#005083;
     outline:none;
-    margin-left:-1.5em;
+    margin-left:-0.5em;
 
     &::-webkit-slider-thumb{
         -webkit-appearance:none;

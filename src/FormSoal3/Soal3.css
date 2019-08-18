@@ -79,7 +79,7 @@ p{
         transform: scale(1);
       }
 }
-@media (min-width:1024px){
+@media (min-width:900px){
 
 
     .soal3-box{
@@ -112,7 +112,7 @@ p{
     
     .soal3-box .soal3-text{
         font-size: 20px;
-        margin-top: 0em;
+        margin-top: 1em;
         margin-left: -3em;
         margin-right: -3em;
     }

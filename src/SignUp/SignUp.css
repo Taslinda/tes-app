@@ -81,6 +81,43 @@
     font-weight: bold;
 }
 
+.form-group-regis .invalid-feedback{
+    margin-top: 10px;
+    margin-left: -2rem;
+    color:white;
+}
+.form-group-regis .valid-feedback{
+    margin-top: 10px;
+    margin-left: -2rem;
+    color:white;
+}
+
+@media (min-width:900px){
+    .regis-form {
+        background-image: url(./background.png);
+        background-color: #005083;
+        width: 100%;
+        height: 150vh;
+        margin-top: -2rem !important;
+        position: absolute;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    .form-group-regis .invalid-feedback{
+        margin-top: 10px;
+        margin-left: 0rem;
+        font-size: 1.2rem;
+        color:white;
+    }
+    .form-group-regis .valid-feedback{
+        margin-top: 10px;
+        margin-left: 0rem;
+        font-size: 1.2rem;
+        color:white;
+    }
+}
+
 @media (min-width:1024px){
     .regis-app {
         background-image: url(../SignUp/background.png);
@@ -174,6 +211,16 @@
     .text-bold{
         font-weight: bold;
     }
+    .form-group-regis .invalid-feedback{
+        margin-top: 10px;
+        margin-left: -1rem;
+        color:white;
+    }
+    .form-group-regis .valid-feedback{
+        margin-top: 10px;
+        margin-left: -1rem !important;
+        color:white;
+    }
 }
 
 @media (min-width:1280px){
@@ -262,5 +309,15 @@
     }
     .text-bold{
         font-weight: bold;
+    }
+    .form-group-regis .invalid-feedback{
+        margin-top: 10px;
+        margin-left: -2rem;
+        color:white;
+    }
+    .form-group-regis .valid-feedback{
+        margin-top: 10px;
+        margin-left: -2rem;
+        color:white;
     }
 }

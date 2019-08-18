@@ -1,13 +1,28 @@
 import React, {Component} from 'react';
-import achievement from '../asset/achievement.svg';
 import {Link} from 'react-router-dom'
+import Lottie from 'react-lottie';
+import animationData from '../asset/Pemesanan-Berhasil.json'
 import './LastPage.css'
 
+
 class LastPage extends Component{
+    
     render(){
+        const defaultOptions = {
+            loop: false,
+            autoplay: true, 
+            animationData: animationData,
+            rendererSettings: {
+              preserveAspectRatio: 'xMidYMid slice'
+            }
+          };
+      
         return(
             <div className="last-page-body">
-                <img src={achievement} alt="" className="achievement-style"/>
+                {/* <img src={achievement} alt="" className="achievement-style"/> */}
+                <Lottie options={defaultOptions}
+                width={500} height={500}
+                />
                 <p className="caption-text">Pengisian Data Selesai</p>
                 <Link to="/"><button className="btn-last-page">Simpan</button></Link>
             </div>
