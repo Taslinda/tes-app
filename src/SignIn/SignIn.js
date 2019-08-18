@@ -13,7 +13,7 @@ class SignIn extends Component{
         setFocusOnError:true,
         clearInputOnReset:false
     }
-  }
+}
   handleSubmit = (e, formData, inputs) => {
       e.preventDefault();
       console.log(formData);
@@ -79,7 +79,8 @@ class SignIn extends Component{
             <div className="regis">
               <Link to="/signup">
                 <p>
-                  Belum memiliki akun ? <span className="text-bold"> Sign Up </span>
+                  Belum memiliki akun ?{" "}
+                  <span className="text-bold"> Sign Up </span>
                 </p>
               </Link>
             </div>
