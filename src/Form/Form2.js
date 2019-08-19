@@ -1,118 +1,208 @@
 import React, {Component} from 'react';
-import './Form2.css'
-import NavigationBar from '../Navbar/Navbar'
+import './Form2.css';
 import { withRouter } from 'react-router-dom';
+import {Navbar} from 'react-bootstrap';
 import { ValidationForm, TextInput} from "react-bootstrap4-form-validation";
-class Form1 extends Component{
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faChevronLeft,  faEllipsisV } from '@fortawesome/free-solid-svg-icons'
+import {Link} from 'react-router-dom';
+
+
+class Form2 extends Component{
   constructor(props){
     super(props);
-    // If you want to use the reset state function, you need to have a reference to the ValidationForm component
-    //If your React < 16.3, check https://reactjs.org/docs/refs-and-the-dom.html#callback-refs
     this.formRef = React.createRef();
     this.state = {
         immediate:true,
         setFocusOnError:true,
         clearInputOnReset:false,
-        head_of_family:'',
-        family_card_number:'',
-        number_of_family_members:'',
-        number_of_toddlers:''
+        province:'',
+        city:'',
+        district:'',
+        village:'',
+        hamlet:'',
+        neighborhood_association:'',
+        citizens_association:'',
+        latitude:'',
+        longitude:''
+        
     }
-    }
-
-    handleSubmit = (e, formData, inputs) => {
-        e.preventDefault();
-        console.log(formData);
-        this.props.history.push('/soal');
-        // alert(JSON.stringify(formData, null, 2));
-    }
-
-    handleErrorSubmit2 = (e,formData, errorInputs) => {
-        console.log(e,formData, errorInputs)
-    }
-    getData2 = async(e) =>{
+  }
+  handleSubmit = (e, formData, inputs) => {
       e.preventDefault();
-      const head_of_family = e.target.elements.head_of_family.value;
-      const family_card_number = e.target.elements.family_card_number.value;
-      const number_of_family_members = e.target.elements.number_of_family_members.value;
-      const number_of_toddlers = e.target.elements.number_of_toddlers.value;
-      const api_call = await fetch(`https://vps.carakde.id/api_takalarsehat/api/v1/households`);
-      const data = await api_call.json();
-  
-      if(head_of_family&&family_card_number&&number_of_family_members&&number_of_toddlers){
-        console.log(data);
-        this.setState({
-          head_of_family:data.households[0].head_id,
-          family_card_number:data.households[0].family_card_number,
-          number_of_family_members:data.households[0].number_of_family_members,
-          number_of_toddlers:data.households[0].number_of_toddlers,
-          error:''
-        })
-      }
-      this.props.history.push('/soal');
+      console.log(formData);
+      this.props.history.push('/form2');
+      // alert(JSON.stringify(formData, null, 2));
+  }
+  handleErrorSubmit = (e,formData, errorInputs) => {
+      console.log(e,formData, errorInputs);
+  }
+
+  getData1 = async(e) =>{
+    e.preventDefault();
+    const province = e.target.elements.province.value;
+    const city = e.target.elements.city.value;
+    const district = e.target.elements.district.value;
+    const village = e.target.elements.village.value;
+    const hamlet = e.target.elements.hamlet.value;
+    const neighborhood_association = e.target.elements.neighborhood_association.value;
+    const citizens_association = e.target.elements.citizens_association.value;
+    const latitude = e.target.elements.latitude.value;
+    const longitude = e.target.elements.longitude.value;
+    const api_call = await fetch(`https://vps.carakde.id/api_takalarsehat/api/v1/households`);
+    const data = await api_call.json();
+
+    if(province&&city&&district&&village&&hamlet&&neighborhood_association&& citizens_association&&latitude&&longitude){
+      console.log(data);
+      this.setState({
+        province:data.households[0].province_id,
+        city:data.households[0].city_id,
+        district:data.households[0].district_id,
+        village:data.households[0].village_id,
+        hamlet:data.households[0].hamlet_id,
+        neighborhood_association:data.households[0].neighborhood_association,
+        citizens_association:data.households[0].citizens_association,
+        latitude:data.households[0].latitude,
+        longitude:data.households[0].longitude,
+        error:''
+      })
     }
+    this.props.history.push('/form3');
+  }
   render(){
     return(
       <div>
-      <NavigationBar navbartitle="Keterangan Rumah Tangga"/>
-      <ValidationForm onSubmit={this.getData2} 
-                        onErrorSubmit={this.handleErrorSubmit2}
+        <Navbar className="navbar-kk">
+              <Link to="/table">
+                <FontAwesomeIcon icon={faChevronLeft} className="left-icon" />
+              </Link>
+              <h5 className="brand-kk" href="#home">Pengenalan Tempat</h5>
+              <FontAwesomeIcon icon={faEllipsisV} className="form-menu-icon" />
+            </Navbar>
+        <ValidationForm onSubmit={this.getData1} 
+                        onErrorSubmit={this.handleErrorSubmit}
                         ref={this.formRef}
                         immediate={this.state.immediate}
                         setFocusOnError={this.state.setFocusOnError}
                         // defaultErrorMessage={{ required: "Please enter something."}} 
                         >
-        <div className="form-page-content2">
-          <div className="form-page-group2">
-            <label htmlFor="">Nama Kepala Rumah Tangga</label>
+        <div className="form-page-content">
+          <div className="form-page-group">
+            <label htmlFor="">Provinsi</label>
             <TextInput 
               type="text" 
-              name="head_of_family"
-              className="form-control col-sm-11 input-text2" 
-              placeholder="Nama"
+              name="province"
+              className="form-control col-sm-11 input-text" 
+              placeholder="Nama Provinsi"
               successMessage="Looks good!"
               errorMessage="Please enter something"
               required
             />
           </div>
           <div className="form-page-group">
-            <label htmlFor="">No. Kartu Keluarga</label>
+            <label htmlFor="">Kabupaten/Kota</label>
             <TextInput 
-              type="number" 
-              name="family_card_number"
-              className="form-control col-sm-11 input-text2"
-              placeholder="00"
+              type="text" 
+              name="city"
+              className="form-control col-sm-11 input-text"
+              placeholder="Kabupaten/Kota"
               successMessage="Looks good!"
               errorMessage="Please enter something"
               required
             />
           </div>
           <div className="form-page-group">
-            <label htmlFor="">Jumlah Anggota Rumah Tangga</label>
+            <label htmlFor="">Kecamatan</label>
             <TextInput 
-              type="number" 
-              name="number_of_family_members"
-              className="form-control col-sm-11 input-text2"
-              placeholder="00"
+              type="text" 
+              name="district"
+              className="form-control col-sm-11 input-text"
+              placeholder="Kecamatan"
               successMessage="Looks good!"
               errorMessage="Please enter something"
               required
             />
           </div>
           <div className="form-page-group">
-            <label htmlFor="">Banyaknya Balita(0-59)</label>
+            <label htmlFor="">Desa/Kelurahan</label>
             <TextInput 
-              type="number" 
-              name="number_of_toddlers"
-              className="form-control col-sm-11 input-text2"
-              placeholder="00"
+              type="text" 
+              name="village"
+              className="form-control col-sm-11 input-text"
+              placeholder="Desa/Kelurahan"
               successMessage="Looks good!"
               errorMessage="Please enter something"
               required
             />
+          </div>
+          <div className="form-page-group">
+            <label htmlFor="">Dusun</label>
+            <TextInput 
+              type="text" 
+              name="hamlet"
+              className="form-control col-sm-11 input-text"
+              placeholder="Dusun"  
+              successMessage="Looks good!"
+              errorMessage="Please enter something"
+              required
+            />
+          </div>
+          <div className="form-page-wrapper">
+            <div className="label">
+              <label htmlFor="">RT/RW</label>
+            </div>
+            <div></div>
+            <div className="input-control">
+              <TextInput 
+                type="number" 
+                name="neighborhood_association"
+                className="form-control col-sm-11 input-double input-double-style"
+                placeholder="RT"  
+                successMessage="Looks good!"
+                errorMessage="Please enter something"
+                required
+              />
+            </div>
+            <div>
+              <TextInput 
+                type="number" 
+                name="citizens_association"
+                className="form-control col-sm-11 input-double"
+                placeholder="RW"  
+                successMessage="Looks good!"
+                errorMessage="Please enter something"
+                required
+              />
+            </div>
+            <div className="label">
+              <label htmlFor="">GPS Koordinat</label>
+            </div>
+            <div></div>
+            <div className="input-control">
+              <TextInput 
+                type="text" 
+                name="latitude"
+                className="form-control col-sm-11 input-double input-double-style"
+                placeholder="Latitude"
+                successMessage="Looks good!"
+                errorMessage="Please enter something"
+                required
+              />
+            </div>
+            <div>
+              <TextInput 
+                type="text" 
+                name="longitude"
+                className="form-control col-sm-11 input-double"
+                placeholder="Longitude"
+                successMessage="Looks good!"
+                errorMessage="Please enter something"
+                required
+              />
+            </div>
           </div>
           <div className="form-group">
-            <button type="submit" className="btn2 primary btn">SIMPAN</button>
+            <button type="submit" className="btn primary form2-button">SIMPAN</button>
           </div>
         </div>
         </ValidationForm>
@@ -121,5 +211,5 @@ class Form1 extends Component{
   }
 }
 
-export default withRouter(Form1);
+export default withRouter(Form2);
 

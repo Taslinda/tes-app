@@ -2,75 +2,143 @@ body{
     background-color: #EDF5F8;
 }
 
-
+.form-menu-icon{
+    color:white;
+    font-size: 3rem;
+    position: absolute !important;
+    left: 93% !important;
+}
 /* FORM CONTENT */
-.form-page-content2{
+.form-page-content{
     font-size: 2.2rem;
     padding-top: 2rem;
     background-color: #EDF5F8;
     height: 115vh;
 }
 
-.form-page-content2 .input-text2{
+.form-page-content .input-text{
     font-size: 2rem !important;
     background-color: #EDF5F8;
     border: 3px solid #69B5D2; 
     border-radius: 7px;
     color : #69B5D2;
-    padding: 2.5rem;
+    padding: 1.5rem !important;
     margin: 1.5rem auto;
 }
 
-.form-page-content2 .input-text2::-webkit-input-placeholder{
+.form-page-content .input-text::-webkit-input-placeholder{
+    font-size: 1.7rem !important;
     color : #69B5D2;
     font-style: italic;
-    font-size: 1.7rem !important;
+}
+.form-page-content .input-text2{
+    font-size: 2rem;
+    background-color: #EDF5F8;
+    border: 3px solid #69B5D2; 
+    border-radius: 7px;
+    color : #69B5D2;
+    padding: 1.5rem;
+    margin: 1.5rem auto;
 }
 
-.form-page-content2 button{
+.form-page-content .input-text2::-webkit-input-placeholder{
+    color : #69B5D2;
+    font-style: italic;
+}
+.form-page-content .input-double{
+    font-size: 2rem !important;
+    background-color: #EDF5F8;
+    border: 2px solid #69B5D2 !important; 
+    border-radius: 7px;
+    color : #69B5D2;
+    margin: 1.5rem auto;
+    width: 27rem !important;
+    padding:1.5rem !important;
+}
+
+.input-double-style{
+    margin-right: 2rem !important;
+}
+.form-page-content .input-double::-webkit-input-placeholder{
+    font-size: 1.7rem !important;
+    color : #69B5D2;
+    font-style: italic;
+}
+
+.form-page-content .form2-button{
     background-color: #1BAEC9;
     color: white;
     padding: 1rem !important;
     margin-top: 3.5rem;
     width: 92%;
-    border-radius: 10px;
-    font-size: 2rem !important;
+    border-radius: 10px !important;
+    font-size: 1.9rem !important;
+    margin-left: 2.3rem;
 }
 
-.form-page-content2 label{
+.form-page-group label{
     display: block !important;
     text-align: left;
     margin-left: 2.5rem;
-    font-size: 1.8rem !important;
+    font-size: 1.8rem;
+}
+.form-page-wrapper .label{
+    display: block !important;
+    text-align: left;
+    margin-left: -2.1rem;
+    font-size: 1.8rem;
 }
 
-.form-page-content2 .btn2{
+.form-page-content .btn2{
     margin-left: 1.2em;
 
 }
-.form-page-content2 .invalid-feedback{
-    margin-top: -1rem;
-    margin-left: -20.4rem !important;
+.form-page-content .invalid-feedback{
+    margin-top: -1rem !important;
+    margin-left: -20rem !important;
     font-size: 1.5rem !important;
-    margin-bottom: 1.5rem;
-    text-align: center;
+    margin-bottom: 1.5rem !important;
 }
-.form-page-content2 .valid-feedback{
+
+.form-page-content .valid-feedback{
     margin-top: -1rem !important;
     margin-left: -23.5rem !important;
     font-size: 1.5rem !important;
     margin-bottom: 1.5rem !important;
-    text-align: center;
 }
+
+.form-page-wrapper .invalid-feedback{
+    margin-top: -1rem !important;
+    margin-left: 0.5rem !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+
+.form-page-wrapper .valid-feedback{
+    margin-top: -1rem !important;
+    margin-left: 0.5rem !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.form-page-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 2.1rem;
+    margin-right: 1.4rem;
+}
+
+
 @media (min-width:900px){
-    .form-page-content2{
+    .form-page-content{
         font-size: 1.3rem;
         /* padding: 2rem 8rem 0 8rem; */
         background-color: #EDF5F8;
         height: 110vh;
     }
     
-    .form-page-content2 .input-text{
+    .form-page-content .input-text{
         font-size: 1.3rem;
         background-color: #EDF5F8;
         border: 2px solid #69B5D2; 
@@ -79,7 +147,7 @@ body{
         padding: 1.5rem;
         width: 92%;
     }
-    .form-page-content2 .input-text2{
+    .form-page-content .input-text2{
         font-size: 1.3rem;
         background-color: #EDF5F8;
         border: 2px solid #69B5D2; 
@@ -89,19 +157,19 @@ body{
         width: 92%;
     }
     
-    .form-page-content2 .input-text::-webkit-input-placeholder{
+    .form-page-content .input-text::-webkit-input-placeholder{
         color : #69B5D2;
         font-style: italic;
         font-size: 1.2rem;
     }
     
-    .form-page-content2 .input-text2::-webkit-input-placeholder{
+    .form-page-content .input-text2::-webkit-input-placeholder{
         color : #69B5D2;
         font-style: italic;
         font-size: 1.2rem;
     }
     
-    .form-page-content2 button{
+    .form-page-content button{
         background-color: #1BAEC9;
         color: white;
         padding: 0.5rem;
@@ -111,35 +179,54 @@ body{
         font-size: 1.2rem;
     }
     
-    .form-page-content2 label{
+    .form-page-content label{
         display: block !important;
         margin-bottom: -1rem !important;
         margin-left: 2.8rem;
     }
     
-    .form-page-content2 .btn2{
+    .form-page-content .btn2{
         margin-left: 4%;
     }
-    /* .form-page-content2 .invalid-feedback{
+    .form-page-content .invalid-feedback{
         margin-top: -1rem;
         font-size: 14px;
         margin-left: -23.5rem;
-        text-align: center;
         margin-bottom: 1.5rem;
-    
     }
-    .form-page-content2 .valid-feedback{
+    .form-page-content .valid-feedback{
         margin-top: -1rem;
         font-size: 14px;
         margin-left: -25.5rem;
         margin-bottom: 1.5rem;
-    } */
+        
+    }
 }
 
+@media(min-width:1024px){
+    .form-page-content .invalid-feedback{
+        margin-top: -1rem;
+        font-size: 1.3rem !important;
+        margin-left: -22.5rem !important;
+        margin-bottom: 1.5rem;
+    }
+    .form-page-wrapper .invalid-feedback{
+        margin-top: -1rem;
+        margin-left: -7.1rem !important;
+        font-size: 1.3rem !important;
+        margin-bottom: 1.5rem;
+    }
+    .form-page-wrapper .valid-feedback{
+        margin-top: -1rem;
+        margin-left: -10rem !important;
+        font-size: 1.3rem !important;
+        margin-bottom: 1.5rem;
+    }
+}
 @media (min-width:1280px){
-    .form-page-content2{
+    .form-page-content{
         width: 40%;
-        font-size: 1rem;
+        font-size: 1rem !important;
         padding : 2rem 0 0 2rem;
         background-color: #EDF5F8;
         height: 105vh !important;
@@ -148,18 +235,18 @@ body{
         box-shadow: 0px 5px 20px 2px rgba(173, 171, 171, 0.8);
     }
     
-    .form-page-content2 .input-text{
-        font-size: 14px;
+    .form-page-content .input-text{
+        font-size: 14px !important;
         background-color: #EDF5F8;
         border: 2px solid #69B5D2; 
         border-radius: 3px;
         color : #69B5D2;
         padding: 1rem !important;
-        width: 120%;
+        width: 100% !important;
         margin-left: 0rem;
         margin-right: -5rem;
     }
-    .form-page-content2 .input-text2{
+    .form-page-content .input-text2{
         font-size: 14px;
         background-color: #EDF5F8;
         border: 2px solid #69B5D2; 
@@ -171,44 +258,52 @@ body{
         margin-right: -5rem;
     }
 
-
-    /* .invalid-feedback{
-        margin-top: -1rem;
-        margin-bottom: 1.5rem;
-        text-align: center !important;
-        margin-left: -8.75rem;
-        color: red;
-    } */
-    
-    .form-page-content2 .input-text::-webkit-input-placeholder{
+    .form-page-content .input-text::-webkit-input-placeholder{
         color : #69B5D2;
         font-style: italic; 
         font-size:14px !important;
     }
-    .form-page-content2 .input-text2::-webkit-input-placeholder{
+    .form-page-content .input-text2::-webkit-input-placeholder{
         color : #69B5D2;
         font-style: italic; 
-        font-size:14px !important;
+        font-size:12px;
+    }
+    .form-page-content .input-double{
+        font-size: 14px !important;
+        background-color: #EDF5F8;
+        border: 2px solid #69B5D2 !important; 
+        border-radius: 3px !important;
+        color : #69B5D2;
+        margin: 1.5rem auto;
+        width: 15.2rem !important;
+        padding:1rem !important;
+        margin-left: -2rem;
+    }
+    .form-page-content .input-double::-webkit-input-placeholder{
+        font-size: 14px !important;
+        color : #69B5D2;
+        font-style: italic;
     }
     
-    .form-page-content2 button{
+    
+    .form-page-content button{
         background-color: #1BAEC9;
         color: white;
-        padding: 0.5rem;
+        padding: 0.5rem !important;
         margin-top: 1.5rem;
         margin-left: -2.2rem !important;
         width: 92%;
         border-radius: 5px;
-        font-size: 15px;
+        font-size: 15px !important;
     }
     
-    .form-page-content2 label{
+    .form-page-content label{
         text-align: left;
         margin-left: 0rem;
         margin-bottom: -1rem;
         font-size: 1rem;
     }
-    .form-page-content2 .btn2{
+    .form-page-content .btn2{
         width: 92%;
         margin-left: 0rem !important;
     }
@@ -216,16 +311,41 @@ body{
     .form-page-group{
         text-align: left;
     }
-    .form-page-content2 .invalid-feedback{
+    .form-page-content .invalid-feedback{
         margin-top: -1rem;
         margin-left: 0rem !important;
-        font-size: 12px;
+        font-size: 14px !important;
         margin-bottom: 1.5rem;
     }
-    .form-page-content2 .valid-feedback{
+    .form-page-content .valid-feedback{
         margin-top: -1rem;
         margin-left: 0rem !important;
-        font-size: 12px;
+        font-size: 14px !important;
+        margin-bottom: 1.5rem;
+    }
+    .form-page-wrapper .invalid-feedback{
+        margin-top: -1rem;
+        margin-left: -4.1rem !important;
+        font-size: 14px !important;
+        margin-bottom: 1.5rem;
+    }
+
+    .form-page-wrapper .input-control .invalid-feedback{
+        margin-top: -1rem;
+        margin-left: -5rem !important;
+        font-size: 14px !important;
+        margin-bottom: 1.5rem;
+    }
+    .form-page-wrapper .valid-feedback{
+        margin-top: -1rem;
+        margin-left: -6.2rem !important;
+        font-size: 14px !important;
+        margin-bottom: 1.5rem;
+    }
+    .form-page-wrapper .input-control .valid-feedback{
+        margin-top: -1rem;
+        margin-left: -7rem !important;
+        font-size: 14px !important;
         margin-bottom: 1.5rem;
     }
     

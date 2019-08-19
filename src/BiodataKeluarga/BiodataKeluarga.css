@@ -1,0 +1,171 @@
+body{
+    font-family: helvetica;
+}.navbar-biodata{
+    background: radial-gradient(farthest-corner at 90% 15%, rgba(28, 170, 197), rgba(8, 68, 156) );
+    height:8rem !important;
+}
+
+.brand-biodata{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.9rem !important;
+    margin-left: 2rem;
+}
+.biodata-menu-icon{
+    color:white;
+    font-size: 3rem;
+    position: absolute;
+    left: 35rem;
+    top:-1rem !important;
+}
+
+.bio-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    margin-bottom: 1rem;
+}
+
+.Nokk{
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+.edit-icon{
+    font-size: 2.8rem;
+    color:#2AACCB;
+    margin-left: 22rem;
+}
+.bio-wrap1{
+    width: 30rem;   
+}
+.bio-name{
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.bio-address{
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.survei-keluarga{
+    font-weight: bold;
+    font-size: 2.3rem;
+    margin-top: 3rem;
+}
+.presentase{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    margin-top: -1rem;
+}
+
+.bio-start{
+    width: 23rem;
+    background-color: #1BAEC9;
+    color:white;
+    border:none;
+    font-size: 2.3rem;
+    border-radius: 10px;
+    height: 8rem;
+    position: absolute;
+    left:35.5rem;
+    top:26.5rem;
+}
+
+.bio-wrapper2{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.bio-wrapper3{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.anggota-keluarga{
+    font-weight: bold;
+    font-size: 2.3rem;
+    margin-top: 1rem;
+}
+
+.tambah-baru{
+    width: 20rem;
+    background-color: #069B00;
+    color:white;
+    border:none;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    height: 4.8rem; 
+    margin-left: 7.5rem !important;
+}
+
+.tambah-baru-icon{
+    width:2.8rem;
+    margin-right: 1rem;
+}
+
+.biodata-body{
+    margin:3rem;
+}
+.progress{
+    width: 20rem;
+    height: 13px !important;
+    background-color: #C4C4C4;
+    border-radius: 13px;
+}
+.progress-bar{
+    background-color: #1BAEC9;
+}
+
+hr{
+    width: 100%;
+    border: 1px solid #C4C4C4;
+}
+
+.biodata-body .table{
+  width: 61rem;
+  margin-left: -3rem;
+  margin-right: -1rem;
+}
+
+.biodata-body .react-bootstrap-table{
+  margin-top: 5rem !important; 
+}
+
+.biodata-body thead{
+  font-size: 1.8rem;
+  background-color: #B0DCED;
+  padding: 5px;
+}
+
+.table-striped tbody tr:nth-of-type(odd){
+  background-color: #DCEEF5;
+}
+
+.survei-button{
+  font-size: 23px;
+  width: 115px;
+  background-color: #1BAEC9;
+  border-radius: 8px;
+  border:none;
+  color: white;
+  padding: 9px;
+  margin-left: 0rem;
+}
+
+.navbar-biodata .dropdown-menu{
+  position: absolute;
+  width: 13rem;
+  top:-1.5rem;
+  left:23.5rem;
+  padding: 18px 0 0 22px;
+  font-size: 1.6rem;
+  border:none;
+  border-radius: 10px;
+  height: 8rem;
+  font-family: Helvetica;
+}

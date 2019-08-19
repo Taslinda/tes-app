@@ -17,7 +17,7 @@ class SignIn extends Component{
   handleSubmit = (e, formData, inputs) => {
       e.preventDefault();
       console.log(formData);
-      this.props.history.push('/form1');
+      this.props.history.push('/table');
       // alert(JSON.stringify(formData, null, 2));
   }
   handleErrorSubmit = (e,formData, errorInputs) => {

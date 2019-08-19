@@ -1,13 +1,13 @@
 .form-page-navbar{
-    background-color: #106AAB;
+    background: radial-gradient(farthest-corner at 90% 15%, rgba(28, 170, 197), rgba(8, 68, 156) );
     padding: 2rem;
-    height:6rem !important;
+    height:8rem !important;
 }
 
 .form-page-brand{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.9rem !important;
+    font-size: 2rem !important;
     margin-left: 2rem;
 }
 
@@ -17,7 +17,7 @@
 }
 @media (min-width:900px){
     .form-page-navbar{
-        background-color: #106AAB;
+        background: radial-gradient(farthest-corner at 90% 15%, rgba(20, 132, 182), rgba(13, 94, 166) );;
         padding: 2rem;
         height: 20px;
     }
@@ -37,7 +37,7 @@
 }    
 @media (min-width:1024px){
     .form-page-navbar{
-        background-color: #106AAB;
+        background: radial-gradient(farthest-corner at 90% 15%, rgba(20, 132, 182), rgba(13, 94, 166) );;
         padding: 2rem;
         height: 20px;
     }
@@ -57,7 +57,7 @@
 
 @media (min-width:1280px){
     .form-page-navbar{
-        background-color: #106AAB;
+        background: radial-gradient(farthest-corner at 90% 15%, rgba(20, 132, 182), rgba(13, 94, 166) );;
         padding: 2rem;
         height: 20px;
     }

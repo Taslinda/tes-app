@@ -6,7 +6,7 @@ import { faChevronLeft,  faEllipsisV } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {Link} from 'react-router-dom';
 
-class Form1 extends Component{
+class DataIndividu extends Component{
     constructor(props){
         super(props);
         this.formRef = React.createRef();
@@ -62,7 +62,7 @@ class Form1 extends Component{
           })
         }
         
-        this.props.history.push('/form2');
+        this.props.history.push('/biodatakeluarga');
       }
       button_female = () =>{
         this.setState({
@@ -95,7 +95,7 @@ class Form1 extends Component{
               <Link to="/table">
                 <FontAwesomeIcon icon={faChevronLeft} className="left-icon" />
               </Link>
-              <h5 className="brand-kk" href="#home">Data Kepala Keluarga</h5>
+              <h5 className="brand-kk" href="#home">Data Individu</h5>
               <FontAwesomeIcon icon={faEllipsisV} className="form-menu-icon" />
             </Navbar>
             <ValidationForm onSubmit={this.getData3} 
@@ -234,4 +234,4 @@ class Form1 extends Component{
     }
 }
 
-export default Form1;
+export default DataIndividu;
