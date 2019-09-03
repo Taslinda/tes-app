@@ -6,6 +6,7 @@ import { ValidationForm, TextInput} from "react-bootstrap4-form-validation";
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faChevronLeft,  faEllipsisV } from '@fortawesome/free-solid-svg-icons'
 import {Link} from 'react-router-dom';
+import axios from 'axios'
 
 
 class Form2 extends Component{
@@ -16,7 +17,7 @@ class Form2 extends Component{
         immediate:true,
         setFocusOnError:true,
         clearInputOnReset:false,
-        province:'',
+        province:11,
         city:'',
         district:'',
         village:'',
@@ -24,7 +25,11 @@ class Form2 extends Component{
         neighborhood_association:'',
         citizens_association:'',
         latitude:'',
-        longitude:''
+        longitude:'',
+        provinsi:[],
+        cities:[],
+        districts:[],
+        villages:[]
         
     }
   }
@@ -38,36 +43,122 @@ class Form2 extends Component{
       console.log(e,formData, errorInputs);
   }
 
+  componentDidMount(){
+    this.getDataProvinces()
+  }
+
+  // THIS FUNCTION TO GET PROVINCES DATA
+  getDataProvinces = async(e) =>{
+    let provincesMap = await axios.get(`https://vps.carakde.id/api_takalarsehat/api/v1/regions/provinces`)
+    let getProvince = await provincesMap.data.provinces.map(province => (
+      {
+        value:province.id,
+        label:province.name
+      }
+      ))
+    await this.setState({
+      provinsi:getProvince
+    })
+    
+  }
+
+  // THIS FUNCTION TO CHANGE THE STATE OF PROVINCE
+  getProvince = async(e) =>{
+    await this.setState({
+      province:e.target.value
+    })
+    console.log(this.state.province)
+    this.getDataCities()
+  }
+
+  // THIS FUNCTION TO GET CITIES DATA
+  getDataCities = async(e) =>{
+    let provinceId = this.state.province;
+    let citiesMap = await axios.get(`https://vps.carakde.id/api_takalarsehat/api/v1/regions/provinces?id=${provinceId}`)
+    let getCity = await citiesMap.data.provinces.cities.map(city => (
+      {
+        value:city.id,
+        label:city.name
+      }
+      ))
+    await this.setState({
+      cities:getCity
+    })
+  }
+
+  // THIS FUNCTION TO CHANGE THE STATE OF CITY
+  getCitie = async(e) =>{
+    await this.setState({
+      city:e.target.value
+    })
+    console.log(this.state.city)
+    this.getDataDistricts()
+  }
+
+  // THIS FUNCTION TO GET DISTRICTS DATA
+  getDataDistricts = async(e) =>{
+    let cityId = this.state.city;
+    let districtsMap = await axios.get(`https://vps.carakde.id/api_takalarsehat/api/v1/regions/cities?id=${cityId}`)
+    let getDistrict = await districtsMap.data.cities.districts.map(district => (
+      {
+        value:district.id,
+        label:district.name
+      }
+      ))
+    this.setState({
+      districts:getDistrict
+    })
+  }
+
+  // THIS FUNCTION TO CHANGE THE STATE OF DISTRICT
+  getDistrict = async(e) =>{
+    await this.setState({
+      district:e.target.value
+    })
+    this.getDataVillages()
+  }
+
+  // THIS FUNCTION TO GET VILLAGES DATA
+  getDataVillages = async(e) =>{
+    let districtId = this.state.district;
+    let villagesMap = await axios.get(`https://vps.carakde.id/api_takalarsehat/api/v1/regions/districts?id=${districtId}`)
+    let getVillage = await villagesMap.data.districts.villages.map(village => (
+      {
+        value:village.id,
+        label:village.name
+      }
+      ))
+    this.setState({
+      villages:getVillage
+    })
+  }
+
+  // THIS FUNCTION TO CHANGE THE STATE OF VILLAGE
+  getVillage = async(e) =>{
+    await this.setState({
+      village:e.target.value
+    })
+  }
   getData1 = async(e) =>{
     e.preventDefault();
-    const province = e.target.elements.province.value;
-    const city = e.target.elements.city.value;
-    const district = e.target.elements.district.value;
-    const village = e.target.elements.village.value;
-    const hamlet = e.target.elements.hamlet.value;
-    const neighborhood_association = e.target.elements.neighborhood_association.value;
-    const citizens_association = e.target.elements.citizens_association.value;
-    const latitude = e.target.elements.latitude.value;
-    const longitude = e.target.elements.longitude.value;
-    const api_call = await fetch(`https://vps.carakde.id/api_takalarsehat/api/v1/households`);
-    const data = await api_call.json();
-
-    if(province&&city&&district&&village&&hamlet&&neighborhood_association&& citizens_association&&latitude&&longitude){
-      console.log(data);
-      this.setState({
-        province:data.households[0].province_id,
-        city:data.households[0].city_id,
-        district:data.households[0].district_id,
-        village:data.households[0].village_id,
-        hamlet:data.households[0].hamlet_id,
-        neighborhood_association:data.households[0].neighborhood_association,
-        citizens_association:data.households[0].citizens_association,
-        latitude:data.households[0].latitude,
-        longitude:data.households[0].longitude,
-        error:''
-      })
+    const getKeluarga = {
+      name: e.target.elements.head_of_family.value,
+      nokk: e.target.elements.family_card_number.value,
+      jmlangg: e.target.elements.number_of_family_members.value,
+      jmlbayi:e.target.elements.number_of_toddlers.value,
+      province : this.state.province,
+      city : e.target.elements.city.value,
+      district : e.target.elements.district.value,
+      village : e.target.elements.village.value,
+      hamlet : e.target.elements.hamlet.value,
+      neighborhood_association : e.target.elements.neighborhood_association.value,
+      citizens_association : e.target.elements.citizens_association.value,
+      latitude : e.target.elements.latitude.value,
+      longitude : e.target.elements.longitude.value,
     }
-    this.props.history.push('/form3');
+
+    console.log(getKeluarga)
+
   }
   render(){
     return(
@@ -84,56 +175,91 @@ class Form2 extends Component{
                         ref={this.formRef}
                         immediate={this.state.immediate}
                         setFocusOnError={this.state.setFocusOnError}
-                        // defaultErrorMessage={{ required: "Please enter something."}} 
                         >
         <div className="form-page-content">
           <div className="form-page-group">
-            <label htmlFor="">Provinsi</label>
+            <label htmlFor="">Nama Kepala Rumah Tangga</label>
             <TextInput 
               type="text" 
-              name="province"
+              name="head_of_family"
               className="form-control col-sm-11 input-text" 
-              placeholder="Nama Provinsi"
+              placeholder="Nama"
               successMessage="Looks good!"
               errorMessage="Please enter something"
               required
             />
+          </div>
+          <div className="form-page-group">
+            <label htmlFor="">No. Kartu Keluarga</label>
+            <TextInput 
+              type="number" 
+              name="family_card_number"
+              className="form-control col-sm-11 input-text"
+              placeholder="00"
+              successMessage="Looks good!"
+              errorMessage="Please enter something"
+              required
+            />
+          </div>
+          <div className="form-page-group">
+            <label htmlFor="">Jumlah Anggota Rumah Tangga</label>
+            <TextInput 
+              type="number" 
+              name="number_of_family_members"
+              className="form-control col-sm-11 input-text"
+              placeholder="00"
+              successMessage="Looks good!"
+              errorMessage="Please enter something"
+              required
+            />
+          </div>
+          <div className="form-page-group">
+            <label htmlFor="">Banyaknya Balita(0-59)</label>
+            <TextInput 
+              type="number" 
+              name="number_of_toddlers"
+              className="form-control col-sm-11 input-text"
+              placeholder="00"
+              successMessage="Looks good!"
+              errorMessage="Please enter something"
+              required
+            />
+          </div>
+          <div className="form-page-group">
+            <label htmlFor="">Provinsi</label>
+            <select onChange={this.getProvince}>
+              <option>--- Pilih Provinsi ---</option>
+              {this.state.provinsi.map(province => 
+                <option key={province.value} value={province.value}>{province.label}</option>
+              )}
+            </select>
           </div>
           <div className="form-page-group">
             <label htmlFor="">Kabupaten/Kota</label>
-            <TextInput 
-              type="text" 
-              name="city"
-              className="form-control col-sm-11 input-text"
-              placeholder="Kabupaten/Kota"
-              successMessage="Looks good!"
-              errorMessage="Please enter something"
-              required
-            />
+            <select onChange={this.getCitie}>
+              <option>--- Pilih Kabupaten/Kota ---</option>
+              {this.state.cities.map(city => 
+                <option key={city.value} value={city.value}>{city.label}</option>
+              )}
+            </select>
           </div>
           <div className="form-page-group">
             <label htmlFor="">Kecamatan</label>
-            <TextInput 
-              type="text" 
-              name="district"
-              className="form-control col-sm-11 input-text"
-              placeholder="Kecamatan"
-              successMessage="Looks good!"
-              errorMessage="Please enter something"
-              required
-            />
+            <select onChange={this.getDistrict}>
+              <option>--- Pilih Kecamatan ---</option>
+              {this.state.districts.map(district => 
+                <option key={district.value} value={district.value}>{district.label}</option>
+              )}
+            </select>
           </div>
           <div className="form-page-group">
             <label htmlFor="">Desa/Kelurahan</label>
-            <TextInput 
-              type="text" 
-              name="village"
-              className="form-control col-sm-11 input-text"
-              placeholder="Desa/Kelurahan"
-              successMessage="Looks good!"
-              errorMessage="Please enter something"
-              required
-            />
+            <select onChange={this.getVillage}>
+              <option>--- Pilih Desa/Kelurahan ---</option>
+              {this.state.villages.map(village => 
+                <option key={village.value} value={village.value}>{village.label}</option>
+              )}
+            </select>
           </div>
           <div className="form-page-group">
             <label htmlFor="">Dusun</label>

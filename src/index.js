@@ -13,6 +13,7 @@ import Side from "./Sidebar/Sidebar";
 import Table from "./Table/Table";
 import BiodataKeluarga from "./BiodataKeluarga/BiodataKeluarga"
 import DataIndividu from "./Form/FormDataIndividu"
+import DetailDataIndividu from "./Detail_Data_Individu/detail_data"
 import LastPage from "./LastPage/LastPage";
 import * as serviceWorker from "./serviceWorker";
 import { Route, BrowserRouter as Router } from "react-router-dom";
@@ -31,8 +32,9 @@ const routing = (
       <Route path="/soal3" component={Soal3} />
       <Route path="/selesai" component={LastPage} />
       <Route path="/sidebar" component={Side} />
-      <Route path="/biodatakeluarga" component={BiodataKeluarga} />
-      <Route path="/dataindividu" component={DataIndividu} />
+      <Route name="detaildata" path="/detaildata/:value" component={DetailDataIndividu} />
+      <Route name="biodata" path="/biodatakeluarga/:value" component={BiodataKeluarga} />
+      <Route name="dataindividu" path="/dataindividu/:addvalue" component={DataIndividu} />
     </div>
   </Router>
 );

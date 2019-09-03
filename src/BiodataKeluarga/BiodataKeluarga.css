@@ -15,7 +15,7 @@ body{
     color:white;
     font-size: 3rem;
     position: absolute;
-    left: 35rem;
+    left: 39rem;
     top:-1rem !important;
 }
 
@@ -130,6 +130,7 @@ hr{
   width: 61rem;
   margin-left: -3rem;
   margin-right: -1rem;
+  font-size: 1.3rem;
 }
 
 .biodata-body .react-bootstrap-table{

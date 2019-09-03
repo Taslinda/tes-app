@@ -8,10 +8,15 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 
 function rankFormatter(cell, row, rowIndex, formatExtraData) { 
+    // console.log("Cell :", cell);
+    // console.log("Row:", row)
+    // console.log("rowIndex:",rowIndex)
+    // console.log("formatData:",formatExtraData)
     return ( 
-        <div>
-         <button className="edit-button">Edit</button> 
-        </div> 
+        
+        <Link to={`/biodatakeluarga/${row.id}`}>
+          <button id={row.head.id} className="edit-button">Edit</button>
+        </Link> 
 ); } 
 
 class Table extends Component{
@@ -22,7 +27,7 @@ class Table extends Component{
           text: ''
         },
         {
-          dataField: 'head_id',
+          dataField: 'head.name',
           text: ''
         },
         {
@@ -78,7 +83,7 @@ class Table extends Component{
                 <BootstrapTable 
                     striped
                     borderless
-                    keyField='id' 
+                    keyField='household_id' 
                     data={ this.state.products } 
                     columns={ this.state.columns }/>
                 <Link to="/form1">

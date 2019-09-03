@@ -1,0 +1,58 @@
+
+.data-edit-icon{
+    color:white;
+    font-size: 2rem;
+    margin-left: 28rem
+}
+
+.data-trash-icon{
+    color:white;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.data-table{
+    width: 90% !important;
+    margin:auto;
+    margin-top: 5rem;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.devided-line{
+    width: 90%;
+}
+
+.survey-result{
+    font-weight: bold;
+    font-size: 3rem;
+    margin-left: 3rem;
+    font-family: 'Roboto', sans-serif;
+}
+.data-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.progress{
+    width: 85%;
+    margin-left: 3rem;
+}
+.percentage{
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    margin-top: -1.5rem;
+}
+
+.survey-button{
+    width: 23rem;
+    background-color: #1BAEC9;
+    color:white;
+    border:none;
+    font-size: 2.5rem;
+    border-radius: 10px;
+    height: 8rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    line-height: 8rem;
+    margin-left: 3rem;
+}

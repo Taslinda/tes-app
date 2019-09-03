@@ -98,6 +98,8 @@ body{
     margin-left: -20rem !important;
     font-size: 1.5rem !important;
     margin-bottom: 1.5rem !important;
+    text-align: center;
+    
 }
 
 .form-page-content .valid-feedback{
@@ -105,21 +107,24 @@ body{
     margin-left: -23.5rem !important;
     font-size: 1.5rem !important;
     margin-bottom: 1.5rem !important;
+    text-align: center;
 }
 
 .form-page-wrapper .invalid-feedback{
     margin-top: -1rem !important;
-    margin-left: 0.5rem !important;
+    margin-left: -5.5rem !important;
     font-size: 1.5rem !important;
     margin-bottom: 1.5rem !important;
+    text-align: center;
 }
 
 
 .form-page-wrapper .valid-feedback{
     margin-top: -1rem !important;
-    margin-left: 0.5rem !important;
+    margin-left: -10rem !important;
     font-size: 1.5rem !important;
     margin-bottom: 1.5rem !important;
+    text-align: center;
 }
 
 .form-page-wrapper{
@@ -128,8 +133,40 @@ body{
     margin-left: 2.1rem;
     margin-right: 1.4rem;
 }
+.form-page-group select{
+    font-size: 1.9rem !important;
+    background-color: #EDF5F8;
+    border: 3px solid #69B5D2; 
+    border-radius: 7px;
+    color : #69B5D2;
+    padding-left: 1.5rem !important;
+    margin: 1.5rem auto;
+    margin-left: 2.5rem;
+    height: 4.3rem !important;
+    width: 56.5rem;
+}
+.form-page-group select option{
+    font-size: 0.9rem;
+}
+.form-kk .input-select option::-webkit-input-placeholder{
+    font-size: 1.7rem !important;
+    color : #69B5D2;
+    font-style: italic;
+}
 
+.first-option::placeholder{
+    font-style: italic;
+}
 
+.maps-button{
+    width: 23rem;
+    background-color: #1BAEC9;
+    color:white;
+    border:none;
+    font-size: 2.3rem !important;
+    border-radius: 10px;
+    height: 8rem;
+}
 @media (min-width:900px){
     .form-page-content{
         font-size: 1.3rem;

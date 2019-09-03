@@ -5,7 +5,7 @@ import './Form1.css'
 import { faChevronLeft,  faEllipsisV } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {Link} from 'react-router-dom';
-
+import axios from 'axios'
 class Form1 extends Component{
     constructor(props){
         super(props);
@@ -16,78 +16,175 @@ class Form1 extends Component{
             clearInputOnReset:false,
             head_name:'',
             nik:'',
-            tptlahir:'',
-            tgllahir:'',
-            umur:'',
+            birthplace:'',
+            birthdate:'',
+            age:'',
             gender:'',
-            agama:'',
-            statusperkawinan:'',
-            pendidikan:'',
-            pekerjaan:'',
-            buttonmale:false,
-            buttonfemale:false
+            religion:'',
+            religions:[],
+            marital_status:'',
+            marital_statuses:[],
+            education_status:'',
+            education_statuses:[],
+            job_status:'',
+            job_statuses:[],
+            checked:false,
+            checked2:false,
             
         }
       }
-      getData3 = async(e) =>{
-        e.preventDefault();
-        const head_name = e.target.elements.head_name.value;
-        const nik = e.target.elements.nik.value;
-        const tptlahir = e.target.elements.tptlahir.value;
-        const tgllahir = e.target.elements.tgllahir.value;
-        const umur = e.target.elements.umur.value;
-        const gender = this.state.gender;
-        const agama = e.target.elements.agama.value;
-        const statusperkawinan = e.target.elements.statusperkawinan.value;
-        const pendidikan = e.target.elements.pendidikan.value;
-        const pekerjaan = e.target.elements.pekerjaan.value;
 
-        const api_call = await fetch(`https://vps.carakde.id/api_takalarsehat/api/v1/residents`);
-        const data = await api_call.json();
-    
-        if(head_name&&nik&&tptlahir&&tgllahir&&umur&&gender&&agama&&statusperkawinan&&pendidikan&&pekerjaan){
-          console.log(data);
+      componentDidMount(){
+        this.getDataReligions()
+        this.getDataMartialStatuses()
+        this.getDataEducationStatuses()
+        this.getDataJobStatuses()
+      }
+
+      // THIS FUNCTION IS TO GET THE DATA OF BIRTHDATE
+      birthdateHandler =  async(e) =>{
+        await this.setState({
+          birthdate:e.target.value
+        })
+      }
+      
+      // THIS FUNCTION IS TO GET THE DATA OF FEMALE RADIO BUTTON
+      femaleHandler = async(e) =>{
+        await this.setState({
+          checked:true,
+          checked2:false
+        })
+        if(this.state.checked){
           this.setState({
-            head_name:data.residents[0].id,
-            nik:data.residents[0].nik,
-            tptlahir:data.residents[0].birthplace,
-            tgllahir:data.residents[0].birthdate,
-            umur:data.residents[0].age,
-            gender:data.residents[0].gender,
-            agama:data.residents[0].religion_id,
-            statusperkawinan:data.residents[0].martial_status_id,
-            pendidikan:data.residents[0].highest_education_status_id,
-            pekerjaan:data.residents[0].job_status_id,
-            error:''
+            gender:'female'
           })
         }
-        
+      }
+
+      // THIS FUNCTION IS TO GET THE DATA OF MALE RADIO BUTTON
+      maleHandler = async(e) =>{
+        await this.setState({
+          checked:false,
+          checked2:true,
+        })
+        if(this.state.checked2){
+          this.setState({
+            gender:'male'
+          })
+        }      
+      }
+
+      // THIS FUNCTION IS TO GET THE DATA OF RELIGIONS
+      getDataReligions = async(e) => {
+        let religionsMap = await axios.get(`https://vps.carakde.id/api_takalarsehat/api/v1/religions`)
+        let getReligion = religionsMap.data.religions.map(religion=>(
+          {
+            value:religion.id,
+            label:religion.name
+          }
+        ))
+        await this.setState({
+          religions:getReligion
+        })
+      }
+
+      // THIS FUNCTION IS TO CHANGE THE STATE OF RELIGION
+      getReligion = async(e) =>{
+        await this.setState({
+          religion:e.target.value
+        })
+      }
+      
+      // THIS FUNCTION IS TO GET THE DATA OF MARTIAL STATUSES
+      getDataMartialStatuses = async(e) =>{
+        let maritalStatusesMap = await axios.get(`https://vps.carakde.id/api_takalarsehat/api/v1/marital_statuses`)
+        let getMaritalStatuses = await maritalStatusesMap.data.maritalStatuses.map(maritalStatus => (
+          {
+            value:maritalStatus.id,
+            label:maritalStatus.name
+          }
+        ))
+        await this.setState({
+          marital_statuses:getMaritalStatuses
+        })
+      }
+
+      // THIS FUNCTION IS TO CHANGE THE STATE OF MARITAL STATUS
+      getMaritalStatus = async(e) => {
+        await this.setState({
+          marital_status:e.target.value
+        })
+      }
+
+      // THIS FUNCTION IS TO GET THE DATA OF EDUCATION STATUSES
+      getDataEducationStatuses = async(e) =>{
+        let educationStatusesMap = await axios.get(`https://vps.carakde.id/api_takalarsehat/api/v1/education_statuses`)
+        let getEducationStatuses = await educationStatusesMap.data.educationStatuses.map(educationStatus => (
+          {
+            value:educationStatus.id,
+            label:educationStatus.name
+          }
+        ))
+        await this.setState({
+          education_statuses:getEducationStatuses
+        })
+      }
+
+      // THIS FUNCTION IS TO CHANGE THE STATE OF EDUCATION STATUS
+      getEducationStatus = async(e) => {
+        await this.setState({
+          education_status:e.target.value
+        })
+      }
+
+      // THIS FUNCTION IS TO GET THE DATA OF JOB STATUSES
+      getDataJobStatuses = async(e) =>{
+        let jobStatusesMap = await axios.get(`https://vps.carakde.id/api_takalarsehat/api/v1/job_statuses`)
+        let getJobStatuses = await jobStatusesMap.data.jobStatuses.map(jobStatus => (
+          {
+            value:jobStatus.id,
+            label:jobStatus.name
+          }
+        ))
+        await this.setState({
+          job_statuses:getJobStatuses
+        })
+      }
+      
+      // THIS FUNCTION IS TO CHANGE THE STATE OF JOB STATUS
+      getJobStatus = async(e) => {
+        await this.setState({
+          job_status:e.target.value
+        })
+      }
+
+
+      getDataForm1 = async(e) =>{
+        e.preventDefault();
+        const getDataKepalaKeluarga = {
+          name : e.target.elements.head_name.value,
+          nik : e.target.elements.nik.value,
+          birthplace : e.target.elements.birthplace.value,
+          birthdate : e.target.elements.birthdate.value,
+          age : e.target.elements.age.value,
+          religion_id : this.state.religion,
+          marital_status_id : this.state.marital_status,
+          highest_education_status_id : this.state.education_status,
+          job_status_id :this.state.job_status,
+          gender : e.target.elements.gender.value,
+        }
+        console.log(getDataKepalaKeluarga)
         this.props.history.push('/form2');
+        // axios.get(`https://vps.carakde.id/api_takalarsehat/api/v1/households`)
+        // .then(res=>console.log(res.data.households[0].head))
+        // .catch(err=>console.log(err))
+        // axios.post(`https://vps.carakde.id/api_takalarsehat/api/v1/residents`, getDataKepalaKeluarga)
+        // .then(res=>console.log(res))
+        // .catch(err=>console.log(err));
+
       }
-      button_female = () =>{
-        this.setState({
-          buttonfemale: (!this.state.buttonfemale),
-          gender:'female'
-        })
-      }
-      button_male = () =>{
-        this.setState({
-          buttonmale: (!this.state.buttonmale),
-          gender:'male'
-        })
-      }
-      getFemaleStyle(){
-        return{
-          background: this.state.buttonfemale? '#1BAEC9' : '#DCEEF5',
-          color:this.state.buttonfemale? 'white':'black'
-        }
-      }
-      getMaleStyle(){
-        return{
-          background: this.state.buttonmale? '#1BAEC9 ' : '#DCEEF5',
-          color:this.state.buttonmale? 'white':'black'
-        }
-      }
+   
+      
     render(){
         return(
         <div>
@@ -98,7 +195,7 @@ class Form1 extends Component{
               <h5 className="brand-kk" href="#home">Data Kepala Keluarga</h5>
               <FontAwesomeIcon icon={faEllipsisV} className="form-menu-icon" />
             </Navbar>
-            <ValidationForm onSubmit={this.getData3} 
+            <ValidationForm onSubmit={this.getDataForm1} 
                         onErrorSubmit={this.handleErrorSubmit}
                         ref={this.formRef}
                         immediate={this.state.immediate}
@@ -132,7 +229,7 @@ class Form1 extends Component{
                         <label htmlFor="">Tempat Lahir</label>
                         <TextInput
                             type="text"
-                            name="tptlahir"
+                            name="birthplace"
                             className="form-control col-sm-11 input-kk"
                             placeholder="Tempat Lahir"
                             successMessage="Looks good!"
@@ -143,20 +240,22 @@ class Form1 extends Component{
                     <div className="form-group-kk">
                         <label htmlFor="">Tanggal Lahir</label>
                         <TextInput
-                            type="number"
-                            name="tgllahir"
+                            type="text"
+                            name="birthdate"
+                            onChange={(e)=>this.birthdateHandler(e)}
+                            placeholder="YYYY-MM-DD"
                             className="form-control col-sm-11 input-kk"
-                            placeholder="Tanggal Lahir"
                             successMessage="Looks good!"
                             errorMessage="Please enter something"
                             required
+                            pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))"
                         />
                     </div>
                     <div className="form-group-kk">
                         <label htmlFor="">Umur</label>
                         <TextInput
                             type="number"
-                            name="umur"
+                            name="age"
                             className="form-control col-sm-11 input-kk"
                             placeholder="Umur"
                             successMessage="Looks good!"
@@ -167,61 +266,67 @@ class Form1 extends Component{
                     <div className="form-group-kk">
                         <label htmlFor="">Jenis Kelamin</label>
                         <div className="kk-button-wrapper">
-                          <div className="male">
-                            <button onClick={this.button_male} style={this.getMaleStyle()} type="button" name="male" className="male-button">Laki-laki</button>
+                          <div 
+                            className="male" 
+                            onChange={this.maleHandler} 
+                            style={{background: this.state.checked2? '#1BAEC9 ' : '#DCEEF5', 
+                            color:this.state.checked2? 'white':'black'}} >
+                            <label htmlFor="male" >Male</label>
+                            <input 
+                                type="radio" 
+                                name="gender" 
+                                id="male" 
+                                value="Male" />
                           </div>
-                          <div className="female">
-                            <button onClick={this.button_female} style={this.getFemaleStyle()} type="button" name="female" className="female-button">Perempuan</button>
+                          <div 
+                            className="female"  
+                            onChange={this.femaleHandler} 
+                            style={{backgroundColor: this.state.checked? '#1BAEC9' : '#DCEEF5', 
+                            color:this.state.checked? 'white':'black'}}>
+                            <label htmlFor="female" >Female</label>
+                            <input 
+                                type="radio"
+                                name="gender" 
+                                id="female" 
+                                value="Female" />
                           </div>
                         </div>
                     </div>
                     <div className="form-group-kk">
                         <label htmlFor="">Agama</label>
-                        <TextInput
-                            type="text"
-                            name="agama"
-                            className="form-control col-sm-11 input-kk"
-                            placeholder="Agama"
-                            successMessage="Looks good!"
-                            errorMessage="Please enter something"
-                            required
-                        />
+                        <select onChange={this.getReligion}> 
+                          <option>--- Pilih Agama ---</option>
+                          {this.state.religions.map(religion => 
+                            <option key={religion.value} value={religion.value}>{religion.label}</option>
+                          )}
+                        </select>
                     </div>
                     <div className="form-group-kk">
                         <label htmlFor="">Status Perkawinan</label>
-                        <TextInput
-                            type="text"
-                            name="statusperkawinan"
-                            className="form-control col-sm-11 input-kk"
-                            placeholder="Status Perkawinan"
-                            successMessage="Looks good!"
-                            errorMessage="Please enter something"
-                            required
-                        />
+                        <select onChange={this.getMaritalStatus}>
+                          <option>--- Pilih Status Perkawinan ---</option>
+                          {this.state.marital_statuses.map(maritalStatus => 
+                            <option key={maritalStatus.value} value={maritalStatus.value}>{maritalStatus.label}</option>
+                          )}
+                        </select>
                     </div>
                     <div className="form-group-kk">
                         <label htmlFor="">Status Pendidikan Tertinggi yang Ditamatkan</label>
-                        <TextInput
-                            type="text"
-                            name="pendidikan"
-                            className="form-control col-sm-11 input-kk"
-                            placeholder="Status Pendidikan Tertinggi yang Ditamatkan"
-                            successMessage="Looks good!"
-                            errorMessage="Please enter something"
-                            required
-                        />
+                        <select onChange={this.getEducationStatus}>
+                        <option>--- Pilih Status Pendidikan  ---</option>
+                        {this.state.education_statuses.map(educationStatus => 
+                          <option key={educationStatus.value} value={educationStatus.value}>{educationStatus.label}</option>
+                        )}
+                        </select>
                     </div>
                     <div className="form-group-kk">
                         <label htmlFor="">Status Pekerjaan</label>
-                        <TextInput
-                            type="text"
-                            name="pekerjaan"
-                            className="form-control col-sm-11 input-kk"
-                            placeholder="Status Pekerjaan"
-                            successMessage="Looks good!"
-                            errorMessage="Please enter something"
-                            required
-                        />
+                        <select onChange={this.getJobStatus}>
+                        <option>--- Pilih Status Pekerjaan ---</option>
+                        {this.state.job_statuses.map(jobStatus => 
+                          <option key={jobStatus.value} value={jobStatus.value}>{jobStatus.label}</option>
+                        )}
+                        </select>
                     </div>
                     <div className="form-group-kk">
                         <button type="submit" className="btn primary">SIMPAN</button>

@@ -26,7 +26,47 @@
     margin: 1.5rem auto;
     height: 4.3rem !important;
 }
+
+.form-group-kk select{
+    font-size: 1.9rem !important;
+    background-color: #EDF5F8;
+    border: 3px solid #69B5D2; 
+    border-radius: 7px;
+    color : #69B5D2;
+    padding-left: 1.5rem !important;
+    margin: 1.5rem auto;
+    margin-left: 2.5rem;
+    height: 4.3rem !important;
+    width: 56.5rem;
+}
+
+.form-group-kk select option{
+    font-size: 0.9rem;
+}
+
+.form-kk .r-input{
+    font-size: 2rem !important;
+    background-color: #EDF5F8;
+    border: 3px solid #69B5D2; 
+    border-radius: 7px;
+    color : #69B5D2;
+    padding: 1.5rem !important;
+    margin: 1.5rem auto;
+    height: 4.3rem !important;
+    width: 56.5rem;
+    margin-left: 2.5rem;
+}
 .form-kk .input-kk::-webkit-input-placeholder{
+    font-size: 1.7rem !important;
+    color : #69B5D2;
+    font-style: italic;
+}
+.form-kk .input-select option::-webkit-input-placeholder{
+    font-size: 1.7rem !important;
+    color : #69B5D2;
+    font-style: italic;
+}
+.form-kk .r-input::-webkit-input-placeholder{
     font-size: 1.7rem !important;
     color : #69B5D2;
     font-style: italic;
@@ -51,7 +91,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0px;
-    margin-top: -3rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -92,4 +132,35 @@
     text-align: center;
     margin-top: -1rem;
     margin-bottom: 1rem;
+}
+
+.male{
+    width: 27rem;
+    height: 5rem;
+    font-size: 1.9rem;
+    line-height: 5rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 2.5rem;
+
+}
+.female{
+    width: 27rem;
+    height: 5rem;
+    font-size: 1.9rem;
+    line-height: 5rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 1rem;
+}
+
+.male label, .female label{
+    text-align: center;
+}
+.form-group-kk input[type=checkbox], input[type=radio]{
+    appearance: none !important;
+}
+
+.form-kk input[type=checkbox], input[type=radio]{
+    appearance: none !important;
 }
