@@ -70,7 +70,7 @@ body{
     height: 8rem;
     position: absolute;
     left:35.5rem;
-    top:26.5rem;
+    top:29rem;
 }
 
 .bio-wrapper2{
@@ -112,10 +112,11 @@ body{
     margin:3rem;
 }
 .progress{
-    width: 20rem;
+    width: 20rem !important;
     height: 13px !important;
     background-color: #C4C4C4;
     border-radius: 13px;
+    margin-left: 0rem !important;
 }
 .progress-bar{
     background-color: #1BAEC9;

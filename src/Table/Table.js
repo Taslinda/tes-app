@@ -15,7 +15,7 @@ function rankFormatter(cell, row, rowIndex, formatExtraData) {
     return ( 
         
         <Link to={`/biodatakeluarga/${row.id}`}>
-          <button id={row.head.id} className="edit-button">Edit</button>
+          <button className="edit-button">Edit</button>
         </Link> 
 ); } 
 
@@ -86,7 +86,7 @@ class Table extends Component{
                     keyField='household_id' 
                     data={ this.state.products } 
                     columns={ this.state.columns }/>
-                <Link to="/form1">
+                <Link to="/form2">
                     <button type="button" className="button-tambah">
                         <div className="button-text">+</div>
                     </button>

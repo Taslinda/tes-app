@@ -164,3 +164,29 @@
 .form-kk input[type=checkbox], input[type=radio]{
     appearance: none !important;
 }
+
+.select-selector{
+    margin:1rem auto 2rem auto;
+    width: 56.5rem;
+    border-radius: 7px;
+    background-color: black !important;
+}
+
+.css-1g48xl4-IndicatorsContainer{
+    opacity: 0;
+}
+
+.css-1uccc91-singleValue{
+    color: #69B5D2 !important;
+    font-size: 1.9rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.css-m8q1j8-control{
+    border-width: 3px !important;
+    outline: none;
+}
+
+.css-1sflke2-menu{
+    font-size: 1.9rem;
+}

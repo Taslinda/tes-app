@@ -36,6 +36,7 @@ class DataIndividu extends Component{
       }
 
       componentDidMount(){
+        // console.log(this.props.match.params.addvalue)
         this.getDataReligions()
         this.getDataRelations()
         this.getDataMaritalStatuses()
@@ -188,8 +189,8 @@ class DataIndividu extends Component{
         const serveport = {
             name : e.target.elements.head_name.value,
             nik : e.target.elements.nik.value,
-            birthplace : e.target.elements.birthdate.value,
-            birthdate : e.target.elements.birthdate.value,
+            birthplace : e.target.elements.birthplace.value,
+            birthdate : this.state.birthdate,
             age : e.target.elements.age.value,
             religion_id: this.state.religion,
             relation_to_head_of_household_id : this.state.relation,
@@ -206,17 +207,16 @@ class DataIndividu extends Component{
         console.log("age:", serveport.age)
         console.log("gender:", serveport.gender)
         console.log("religion:", serveport.religion_id)
-        console.log("relation:", serveport.relation_to_head_of_household)
+        console.log("relation:", serveport.relation_to_head_of_household_id)
         console.log("marital_status:", serveport.marital_status_id)
         console.log("education_status:", serveport.highest_education_status_id)
         console.log("job_status:", serveport.job_status_id)
 
-        const thisvalue= this.props.match.params;       
-        localStorage.setItem("dataForm", "1")
-        axios.post(`https://vps.carakde.id/api_takalarsehat/api/v1/residents?household_id=${thisvalue.addvalue}`,serveport)
+        let value= this.props.match.params.addvalue;     
+        axios.post(`https://vps.carakde.id/api_takalarsehat/api/v1/residents?household_id=${value}`,serveport)
         .then(res => console.log(res.data)).catch(err=>console.log(err));
-        // this.props.history.push(`/biodatakeluarga/${back_to_family_data}`);
-        this.props.history.push(`/biodatakeluarga/${thisvalue.addvalue}`);
+        this.props.history.push(`/biodatakeluarga/${value}`);
+        console.log(value)
       }
 
       
@@ -266,7 +266,7 @@ class DataIndividu extends Component{
                         <label htmlFor="">Tempat Lahir</label>
                         <TextInput
                             type="text"
-                            name="birthdate"
+                            name="birthplace"
                             className="form-control col-sm-11 input-kk"
                             placeholder="Tempat Lahir"
                             successMessage="Looks good!"
@@ -280,7 +280,7 @@ class DataIndividu extends Component{
                             type="text"
                             id="birthdate"
                             name="birthdate"
-                            onChange={(e)=>this.birthdateHandler(e)}
+                            onChange={this.birthdateHandler}
                             className="form-control col-sm-11 input-kk"
                             placeholder="YYYY-MM-DD"
                             successMessage="Looks good!"
@@ -334,7 +334,7 @@ class DataIndividu extends Component{
                     <div className="form-group-kk">
                         <label htmlFor="">Agama</label>
                         <select onChange={this.getReligion}>
-                        <option>--- Pilih Agama ---</option>
+                        <option disabled selected>--- Pilih Agama ---</option>
                           {this.state.religions.map(religion => 
                             <option key={religion.value} value={religion.value}>{religion.label}</option>
                           )}
@@ -343,7 +343,7 @@ class DataIndividu extends Component{
                     <div className="form-group-kk">
                         <label htmlFor="">Hubungan dengan Kepala Rumah Tangga</label>
                         <select onChange={this.getRelation}>
-                          <option>--- Pilih Status Hubungan ---</option>
+                          <option disabled selected>--- Pilih Status Hubungan ---</option>
                           {this.state.relations.map(relation => 
                             <option key={relation.value} value={relation.value}>{relation.label}</option>
                           )}
@@ -352,7 +352,7 @@ class DataIndividu extends Component{
                     <div className="form-group-kk">
                         <label htmlFor="">Status Perkawinan</label>
                         <select onChange={this.getMaritalStatus}>
-                        <option>--- Pilih Status Perkawinan ---</option>
+                        <option disabled selected>--- Pilih Status Perkawinan ---</option>
                           {this.state.marital_statuses.map(maritalStatus => 
                             <option key={maritalStatus.value} value={maritalStatus.value}>{maritalStatus.label}</option>
                           )}
@@ -361,7 +361,7 @@ class DataIndividu extends Component{
                     <div className="form-group-kk">
                         <label htmlFor="">Status Pendidikan Tertinggi yang Ditamatkan</label>
                         <select onChange={this.getEducationStatus}>
-                          <option>--- Pilih Status Pendidikan  ---</option>
+                          <option disabled selected>--- Pilih Status Pendidikan  ---</option>
                           {this.state.education_statuses.map(educationStatus => 
                             <option key={educationStatus.value} value={educationStatus.value}>{educationStatus.label}</option>
                           )}
@@ -370,7 +370,7 @@ class DataIndividu extends Component{
                     <div className="form-group-kk">
                         <label htmlFor="">Status Pekerjaan</label>
                         <select onChange={this.getJobStatus}>
-                        <option>--- Pilih Status Pekerjaan ---</option>
+                        <option disabled selected>--- Pilih Status Pekerjaan ---</option>
                         {this.state.job_statuses.map(jobStatus => 
                           <option key={jobStatus.value} value={jobStatus.value}>{jobStatus.label}</option>
                         )}

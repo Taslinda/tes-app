@@ -17,7 +17,7 @@ class Form2 extends Component{
         immediate:true,
         setFocusOnError:true,
         clearInputOnReset:false,
-        province:11,
+        province:'',
         city:'',
         district:'',
         village:'',
@@ -29,7 +29,7 @@ class Form2 extends Component{
         provinsi:[],
         cities:[],
         districts:[],
-        villages:[]
+        villages:[],
         
     }
   }
@@ -80,7 +80,7 @@ class Form2 extends Component{
         value:city.id,
         label:city.name
       }
-      ))
+    ))
     await this.setState({
       cities:getCity
     })
@@ -178,54 +178,6 @@ class Form2 extends Component{
                         >
         <div className="form-page-content">
           <div className="form-page-group">
-            <label htmlFor="">Nama Kepala Rumah Tangga</label>
-            <TextInput 
-              type="text" 
-              name="head_of_family"
-              className="form-control col-sm-11 input-text" 
-              placeholder="Nama"
-              successMessage="Looks good!"
-              errorMessage="Please enter something"
-              required
-            />
-          </div>
-          <div className="form-page-group">
-            <label htmlFor="">No. Kartu Keluarga</label>
-            <TextInput 
-              type="number" 
-              name="family_card_number"
-              className="form-control col-sm-11 input-text"
-              placeholder="00"
-              successMessage="Looks good!"
-              errorMessage="Please enter something"
-              required
-            />
-          </div>
-          <div className="form-page-group">
-            <label htmlFor="">Jumlah Anggota Rumah Tangga</label>
-            <TextInput 
-              type="number" 
-              name="number_of_family_members"
-              className="form-control col-sm-11 input-text"
-              placeholder="00"
-              successMessage="Looks good!"
-              errorMessage="Please enter something"
-              required
-            />
-          </div>
-          <div className="form-page-group">
-            <label htmlFor="">Banyaknya Balita(0-59)</label>
-            <TextInput 
-              type="number" 
-              name="number_of_toddlers"
-              className="form-control col-sm-11 input-text"
-              placeholder="00"
-              successMessage="Looks good!"
-              errorMessage="Please enter something"
-              required
-            />
-          </div>
-          <div className="form-page-group">
             <label htmlFor="">Provinsi</label>
             <select onChange={this.getProvince}>
               <option>--- Pilih Provinsi ---</option>
@@ -236,8 +188,9 @@ class Form2 extends Component{
           </div>
           <div className="form-page-group">
             <label htmlFor="">Kabupaten/Kota</label>
-            <select onChange={this.getCitie}>
-              <option>--- Pilih Kabupaten/Kota ---</option>
+            <select disabled={this.state.cities.length === 0 ? true : false}
+                    onChange={this.getCitie}>
+              <option disabled selected>--- Pilih Kabupaten/Kota ---</option>
               {this.state.cities.map(city => 
                 <option key={city.value} value={city.value}>{city.label}</option>
               )}
@@ -245,8 +198,9 @@ class Form2 extends Component{
           </div>
           <div className="form-page-group">
             <label htmlFor="">Kecamatan</label>
-            <select onChange={this.getDistrict}>
-              <option>--- Pilih Kecamatan ---</option>
+            <select disabled={this.state.districts.length === 0 ? true : false}
+                    onChange={this.getDistrict}>
+              <option disabled selected>--- Pilih Kecamatan ---</option>
               {this.state.districts.map(district => 
                 <option key={district.value} value={district.value}>{district.label}</option>
               )}
@@ -254,8 +208,9 @@ class Form2 extends Component{
           </div>
           <div className="form-page-group">
             <label htmlFor="">Desa/Kelurahan</label>
-            <select onChange={this.getVillage}>
-              <option>--- Pilih Desa/Kelurahan ---</option>
+            <select disabled={this.state.districts.length === 0 ? true : false}
+                    onChange={this.getVillage}>
+              <option disabled selected>--- Pilih Desa/Kelurahan ---</option>
               {this.state.villages.map(village => 
                 <option key={village.value} value={village.value}>{village.label}</option>
               )}
@@ -266,7 +221,7 @@ class Form2 extends Component{
             <TextInput 
               type="text" 
               name="hamlet"
-              className="form-control col-sm-11 input-text"
+              className="form-control col-sm-11 input-text2"
               placeholder="Dusun"  
               successMessage="Looks good!"
               errorMessage="Please enter something"
@@ -282,7 +237,7 @@ class Form2 extends Component{
               <TextInput 
                 type="number" 
                 name="neighborhood_association"
-                className="form-control col-sm-11 input-double input-double-style"
+                className="form-control col-sm-11 input-rt input-double-style"
                 placeholder="RT"  
                 successMessage="Looks good!"
                 errorMessage="Please enter something"
@@ -293,7 +248,7 @@ class Form2 extends Component{
               <TextInput 
                 type="number" 
                 name="citizens_association"
-                className="form-control col-sm-11 input-double"
+                className="form-control col-sm-11 input-rw"
                 placeholder="RW"  
                 successMessage="Looks good!"
                 errorMessage="Please enter something"
@@ -307,24 +262,16 @@ class Form2 extends Component{
             <div className="input-control">
               <TextInput 
                 type="text" 
-                name="latitude"
-                className="form-control col-sm-11 input-double input-double-style"
-                placeholder="Latitude"
+                name="coordinate"
+                className="form-control col-sm-11 coordinate-input"
+                placeholder="Koordinat"
                 successMessage="Looks good!"
                 errorMessage="Please enter something"
                 required
               />
             </div>
-            <div>
-              <TextInput 
-                type="text" 
-                name="longitude"
-                className="form-control col-sm-11 input-double"
-                placeholder="Longitude"
-                successMessage="Looks good!"
-                errorMessage="Please enter something"
-                required
-              />
+            <div className="button-wrapper">
+              <button className="maps-button">Maps</button>
             </div>
           </div>
           <div className="form-group">

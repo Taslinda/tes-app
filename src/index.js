@@ -14,6 +14,7 @@ import Table from "./Table/Table";
 import BiodataKeluarga from "./BiodataKeluarga/BiodataKeluarga"
 import DataIndividu from "./Form/FormDataIndividu"
 import DetailDataIndividu from "./Detail_Data_Individu/detail_data"
+import EditDataIndividu from "./Form/FormEditDataIndividu"
 import LastPage from "./LastPage/LastPage";
 import * as serviceWorker from "./serviceWorker";
 import { Route, BrowserRouter as Router } from "react-router-dom";
@@ -33,6 +34,7 @@ const routing = (
       <Route path="/selesai" component={LastPage} />
       <Route path="/sidebar" component={Side} />
       <Route name="detaildata" path="/detaildata/:value" component={DetailDataIndividu} />
+      <Route name="editdata" path="/editdata/:value" component={EditDataIndividu} />
       <Route name="biodata" path="/biodatakeluarga/:value" component={BiodataKeluarga} />
       <Route name="dataindividu" path="/dataindividu/:addvalue" component={DataIndividu} />
     </div>

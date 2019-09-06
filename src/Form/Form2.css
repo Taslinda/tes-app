@@ -16,53 +16,78 @@ body{
     height: 115vh;
 }
 
-.form-page-content .input-text{
+.form-page-content .input-text2{
     font-size: 2rem !important;
     background-color: #EDF5F8;
     border: 3px solid #69B5D2; 
     border-radius: 7px;
     color : #69B5D2;
     padding: 1.5rem !important;
-    margin: 1.5rem auto;
+    margin: 1.5rem auto !important;
+    height: 4.5rem !important;
 }
 
-.form-page-content .input-text::-webkit-input-placeholder{
-    font-size: 1.7rem !important;
-    color : #69B5D2;
-    font-style: italic;
-}
-.form-page-content .input-text2{
-    font-size: 2rem;
-    background-color: #EDF5F8;
-    border: 3px solid #69B5D2; 
-    border-radius: 7px;
-    color : #69B5D2;
-    padding: 1.5rem;
-    margin: 1.5rem auto;
+.form-page-content .input-double-style{
+  margin-left: 0.5rem !important;
 }
 
-.form-page-content .input-text2::-webkit-input-placeholder{
+.form-page-content .input-text2::-webkit-input-placeholder, 
+.form-page-content .coordinate-input::-webkit-input-placeholder,
+.form-page-content .input-double::-webkit-input-placeholder,
+.form-page-content .input-rt::-webkit-input-placeholder,
+.form-page-content .input-rw::-webkit-input-placeholder{
     color : #69B5D2;
     font-style: italic;
+    font-size: 1.8rem !important;
 }
-.form-page-content .input-double{
+.form-page-content .input-rt{
     font-size: 2rem !important;
     background-color: #EDF5F8;
     border: 2px solid #69B5D2 !important; 
     border-radius: 7px;
     color : #69B5D2;
     margin: 1.5rem auto;
-    width: 27rem !important;
+    width: 29rem !important;
     padding:1.5rem !important;
+    height: 4.5rem !important;
+}
+.form-page-content .input-rw{
+    font-size: 2rem !important;
+    background-color: #EDF5F8;
+    border: 2px solid #69B5D2 !important; 
+    border-radius: 7px;
+    color : #69B5D2;
+    margin:1.5rem 0 0 0.5rem;
+    width: 29rem !important;
+    padding:1.5rem !important;
+    height: 4.5rem !important;
 }
 
-.input-double-style{
-    margin-right: 2rem !important;
-}
-.form-page-content .input-double::-webkit-input-placeholder{
-    font-size: 1.7rem !important;
+.coordinate-input{
+    font-size: 2rem !important;
+    background-color: #EDF5F8;
+    border: 2px solid #69B5D2 !important; 
+    border-radius: 7px;
     color : #69B5D2;
-    font-style: italic;
+    margin: 1.5rem 1rem auto !important;
+    height: 4.5rem !important;
+    width: 38rem !important;
+    padding:1.5rem !important;
+    position: absolute;
+}
+
+.maps-button{
+    width: 15rem !important;
+    background-color: #1BAEC9;
+    color:white;
+    border:none;
+    font-size: 2rem !important;
+    border-radius: 10px;
+    height: 4.8rem;
+    position: relative;
+    left:40%;
+    margin-top: 1.3rem !important;
+
 }
 
 .form-page-content .form2-button{
@@ -158,15 +183,7 @@ body{
     font-style: italic;
 }
 
-.maps-button{
-    width: 23rem;
-    background-color: #1BAEC9;
-    color:white;
-    border:none;
-    font-size: 2.3rem !important;
-    border-radius: 10px;
-    height: 8rem;
-}
+
 @media (min-width:900px){
     .form-page-content{
         font-size: 1.3rem;

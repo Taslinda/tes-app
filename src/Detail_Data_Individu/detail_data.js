@@ -6,36 +6,45 @@ import {Link} from 'react-router-dom';
 import axios from 'axios'
 import './detail_data.css'
 
-class DetailDataIndividu extends Component{
-state={
-    id:'',
-    progress:40,
-    nik:'',
-    name:'',
-    birthplace:'',
-    birthdate:'',
-    age:'',
-    gender:'',
-    religion_id:'',
-    religion_name:'',
-    marital_status_id:'',
-    marital_status_name:'',
-    education_status_id:'',
-    education_status_name:'',
-    job_status_id:'',
-    job_status_name:''
-}
+    class DetailDataIndividu extends Component{
+    state={
+        household_id:'',
+        id:'',
+        progress:40,
+        nik:'',
+        name:'',
+        birthplace:'',
+        birthdate:'',
+        age:'',
+        gender:'',
+        religion_id:'',
+        religion_name:'',
+        marital_status_id:'',
+        marital_status_name:'',
+        education_status_id:'',
+        education_status_name:'',
+        job_status_id:'',
+        job_status_name:''
+    }
 
-componentDidMount(){
-    this.getDetailData()
-    console.log(this.state.marital_status_name)
-}
+    componentDidMount(){
+        this.getDetailData()
+    }
+
+    // DELETE HANDLER
+    deleteHandler = async(e) =>{
+      let delete_value = this.props.match.params.value
+      await axios.delete(`https://vps.carakde.id/api_takalarsehat/api/v1/residents/${delete_value}`)
+      this.props.history.push(`/table`)
+      
+    }
+    
     getDetailData = async(e) =>{
         const page_value = this.props.match.params
         const getData = await axios.get(`https://vps.carakde.id/api_takalarsehat/api/v1/residents?id=${page_value.value}`)
-        console.log(getData.data.residents[0].age)
         this.setState({
-            id: getData.data.residents[0].household_id,
+            household_id: getData.data.residents[0].household_id,
+            id: getData.data.residents[0].id,
             nik: getData.data.residents[0].nik,
             name:getData.data.residents[0].name,
             birthplace:getData.data.residents[0].birthplace,
@@ -47,6 +56,7 @@ componentDidMount(){
             education_status_id:getData.data.residents[0].highest_education_status_id,
             job_status_id:getData.data.residents[0].job_status_id
         })
+        console.log(this.state.id)
         this.getReligion()
         this.getMaritalStatus()
         this.getEducationStatus()
@@ -86,16 +96,18 @@ componentDidMount(){
         })
     }
     render(){
-      const {id} = this.state
+      const {household_id, id} = this.state
         return(
             <div>
             <Navbar className="navbar-kk">
-              <Link to={`/biodatakeluarga/${id}`}>
+              <Link to={`/biodatakeluarga/${household_id}`}>
                 <FontAwesomeIcon icon={faChevronLeft} className="left-icon" />
               </Link>
               <h5 className="brand-kk" href="#home">Detail Data Individu</h5>
-              <FontAwesomeIcon icon={faEdit} className="data-edit-icon" />
-              <FontAwesomeIcon icon={faTrashAlt} className="data-trash-icon" />
+              <Link to={`/editdata/${id}`}>
+                <FontAwesomeIcon icon={faEdit} className="data-edit-icon" />
+              </Link>
+              <FontAwesomeIcon onClick={ () => {this.deleteHandler()}} icon={faTrashAlt} className="data-trash-icon" />
             </Navbar>
            <Table striped bordered hover className="data-table">
             <tbody>
