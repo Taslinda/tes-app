@@ -1,56 +1,61 @@
-
-.table-navbar{
-    background: radial-gradient(farthest-corner at 90% 15%, rgba(28, 170, 197), rgba(8, 68, 156) );
-    height:13rem !important;
+.table-navbar {
+    background: radial-gradient(farthest-corner at 90% 15%, rgba(28, 170, 197), rgba(8, 68, 156));
+    height: 13rem !important;
     font-family: helvetica;
 }
 
-.table-brand{
+.table-brand {
     color: white;
     font-size: 1.9rem !important;
     font-family: helvetica;
 }
 
-.search-icon{
-        color:white;
-        font-size: 2.5rem;
+.search-icon {
+    color: white;
+    font-size: 2.5rem;
 }
 
-.table-wrapper{
+.table-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
-    color:white;
+    color: white;
     grid-gap: 2rem;
     margin-left: 2.5rem;
     margin-top: 3rem;
 }
 
-.table-wrapper p{
+.table-wrapper p {
     font-size: 1.9rem;
     font-family: helvetica;
 }
 
-.wrap1{
+.wrap1 {
     width: 18rem;
 }
-.wrap2{
+
+.wrap2 {
     margin-left: 29rem;
 }
-.wrap3{
+
+.wrap3 {
     margin-left: -1rem;
 }
-.wrap5{
+
+.wrap5 {
     margin-left: 2rem;
 }
-.wrap6{
+
+.wrap6 {
     margin-left: -4rem;
 }
-.table-body{
+
+.table-body {
     background-color: white;
     height: 100%;
     position: relative;
 }
-.table{
+
+.table {
     font-size: 26px;
     font-weight: 600;
     text-align: center;
@@ -58,61 +63,240 @@
     font-family: helvetica;
 }
 
-.table td{
+.table td {
     width: 250px;
 }
 
-.edit-button{
+.edit-button {
     font-size: 23px;
     width: 115px;
     background-color: #1BAEC9;
     border-radius: 8px;
-    border:none;
+    border: none;
     color: white;
     padding: 9px;
     margin-left: 6rem;
 }
 
-.button-tambah{
+.button-tambah {
     width: 150px;
     height: 150px;
     position: absolute;
-    top:87%;
+    top: 87%;
     left: 81%;
     position: fixed;
     background-color: #005083;
     color: white;
     font-size: 6rem;
-    border:none;
+    border: none;
     border-radius: 50%;
 }
-.button-text{
+
+.button-text {
     margin-top: 0rem;
 }
 
-.dropdown-toggle::after{
+.dropdown-toggle::after {
     display: none;
     background: transparent;
 }
 
-.btn-primary{
+.btn-primary {
     background: transparent;
-    border:none;
+    border: none;
 }
 
-.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus{
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
     background: transparent;
-    border:none;
+    border: none;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     width: 13rem;
-    top:-6%;
-    left:-10.5rem;
+    top: -6%;
+    left: -10.5rem;
     padding: 18px 0 0 22px;
     font-size: 1.6rem;
-    border:none;
+    border: none;
     border-radius: 10px;
     height: 8rem;
     font-family: Helvetica, sans-serif;
+}
+
+@media (min-width:1280px) {
+
+    .react-bootstrap-table {
+        width: 60% !important;
+        font-size: 1rem !important;
+        padding: 0rem 0 0 0rem;
+        background-color: #EDF5F8;
+        height: 100% !important;
+        margin: 2.8rem auto;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px 2px rgba(173, 171, 171, 0.8);
+        margin-top: 0rem;
+        margin-left: 20rem !important;
+
+    }
+
+    .wrap1 .table-brand {
+        margin-top: 0.5rem !important;
+        margin-left: 2rem;
+    }
+
+    .wrap2 {
+        margin-top: 2rem;
+        margin-left: 52rem;
+    }
+
+    .search-icon {
+        font-size: 2.5rem;
+        margin-top: -1rem !important;
+    }
+
+    .wrap3 {
+        margin-left: 0rem;
+    }
+
+    .wrap3 .dropdown-toggle {
+        margin-top: 1rem;
+
+    }
+
+    .wrap3 .dropdown-menu {
+        margin-top: 2rem !important;
+    }
+
+    .wrap4 {
+        width: 100%;
+        margin-left: 20rem !important;
+    }
+
+    .wrap5 p {
+        margin-left: 10rem !important;
+    }
+
+    .wrap6 p {
+        margin-left: -19rem !important;
+    }
+
+    .wrap4 p,
+    .wrap5 p,
+    .wrap6 p {
+        margin-top: -2rem !important;
+    }
+
+    td .edit-button {
+        margin: auto;
+    }
+
+    .button-tambah {
+        width: 80px;
+        height: 80px;
+        font-size: 50px;
+        left: 73.5rem;
+        top: 85%;
+    }
+
+}
+
+@media (min-width: 900px) {
+    .table-body .table-navbar {
+        height: 10rem !important;
+    }
+
+    .wrap1 .table-brand {
+        font-size: 2rem !important;
+        margin-top: 0rem;
+    }
+
+    .wrap2 .search-icon {
+        font-size: 2rem;
+        margin-top: 0.7rem;
+    }
+
+    .wrap3 .dropdown {
+        font-size: 2rem;
+        margin-top: 0rem;
+    }
+
+    .wrap3 .dropdown-menu {
+        height: 6rem;
+        width: 3rem;
+        font-size: 1.2rem;
+        margin-left: 3rem;
+        margin-top: -0.5rem;
+    }
+
+    .wrap4 p,
+    .wrap5 p,
+    .wrap6 p {
+        font-size: 1.5rem;
+    }
+
+    .wrap4 p {
+        margin-left: 4rem;
+    }
+
+    .wrap5 p {
+        margin-left: 0rem;
+    }
+
+    .wrap6 p {
+        margin-left: -3rem;
+    }
+
+    td .edit-button {
+        margin: auto;
+        font-size: 1.25rem;
+        width: 6rem;
+    }
+
+    .button-tambah {
+        width: 80px;
+        height: 80px;
+        font-size: 50px;
+        top: 85%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .wrap1 .table-brand {
+        margin-top: -0.5rem;
+        font-size: 1.8rem !important;
+    }
+
+    .wrap3 .dropdown {
+        font-size: 1rem;
+        margin-top: -0.5rem;
+
+    }
+
+    .wrap3 .dropdown-menu {
+        width: 5rem;
+        height: 6rem;
+        font-size: 1.2rem;
+    }
+
+    .wrap3 .dropdown-toggle {
+        font-size: 2rem;
+    }
+
+    .wrap4 p,
+    .wrap5 p,
+    .wrap6 p {
+        margin-top: -1rem;
+    }
+
+    .wrap2 .search-icon {
+        margin-left: 3rem;
+        font-size: 2rem;
+        margin-top: 0rem;
+    }
+
+    .wrap6 p {
+        margin-left: -3.5rem;
+    }
 }

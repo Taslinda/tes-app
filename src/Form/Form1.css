@@ -1,38 +1,41 @@
-.navbar-kk{
-    background: radial-gradient(farthest-corner at 90% 15%, rgba(20, 132, 182), rgba(13, 94, 166) );;
+.navbar-kk {
+    background: radial-gradient(farthest-corner at 90% 15%, rgba(20, 132, 182), rgba(13, 94, 166));
+    ;
     padding: 2rem;
-    height:8rem !important;
+    height: 8rem !important;
 }
 
-.brand-kk{
+.brand-kk {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2rem !important;
     margin-left: 2rem;
 }
-.form-kk{
+
+.form-kk {
     font-size: 2.2rem;
     padding-top: 2rem;
     background-color: #EDF5F8;
     height: 115vh;
 }
-.form-kk .input-kk{
+
+.form-kk .input-kk {
     font-size: 2rem !important;
     background-color: #EDF5F8;
-    border: 3px solid #69B5D2; 
+    border: 3px solid #69B5D2;
     border-radius: 7px;
-    color : #69B5D2;
+    color: #69B5D2;
     padding: 1.5rem !important;
     margin: 1.5rem auto;
     height: 4.3rem !important;
 }
 
-.form-group-kk select{
+.form-group-kk select {
     font-size: 1.9rem !important;
     background-color: #EDF5F8;
-    border: 3px solid #69B5D2; 
+    border: 3px solid #69B5D2;
     border-radius: 7px;
-    color : #69B5D2;
+    color: #69B5D2;
     padding-left: 1.5rem !important;
     margin: 1.5rem auto;
     margin-left: 2.5rem;
@@ -40,44 +43,49 @@
     width: 56.5rem;
 }
 
-.form-group-kk select option{
+.form-group-kk select option {
     font-size: 0.9rem;
 }
 
-.form-kk .r-input{
+.form-kk .r-input {
     font-size: 2rem !important;
     background-color: #EDF5F8;
-    border: 3px solid #69B5D2; 
+    border: 3px solid #69B5D2;
     border-radius: 7px;
-    color : #69B5D2;
+    color: #69B5D2;
     padding: 1.5rem !important;
     margin: 1.5rem auto;
     height: 4.3rem !important;
     width: 56.5rem;
     margin-left: 2.5rem;
 }
-.form-kk .input-kk::-webkit-input-placeholder{
+
+.form-kk .input-kk::-webkit-input-placeholder {
     font-size: 1.7rem !important;
-    color : #69B5D2;
+    color: #69B5D2;
     font-style: italic;
 }
-.form-kk .input-select option::-webkit-input-placeholder{
+
+.form-kk .input-select option::-webkit-input-placeholder {
     font-size: 1.7rem !important;
-    color : #69B5D2;
+    color: #69B5D2;
     font-style: italic;
 }
-.form-kk .r-input::-webkit-input-placeholder{
+
+.form-kk .r-input::-webkit-input-placeholder {
     font-size: 1.7rem !important;
-    color : #69B5D2;
+    color: #69B5D2;
     font-style: italic;
 }
-.form-kk label{
+
+.form-kk label {
     display: block !important;
     text-align: left;
     margin-left: 2.5rem;
     font-size: 1.8rem;
 }
-.form-kk button{
+
+.form-kk button {
     background-color: #1BAEC9;
     color: white;
     padding: 1rem !important;
@@ -87,7 +95,8 @@
     font-size: 1.9rem !important;
     margin-left: 2.3rem;
 }
-.kk-button-wrapper{
+
+.kk-button-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0px;
@@ -95,46 +104,49 @@
     margin-bottom: 2rem;
 }
 
-.kk-button-wrapper .male-button{
+.kk-button-wrapper .male-button {
     width: 28rem;
-    border:none;
-    padding:1rem !important;
+    border: none;
+    padding: 1rem !important;
     margin-left: 2.5rem;
     border-radius: 5px;
 }
-.kk-button-wrapper .female-button{
+
+.kk-button-wrapper .female-button {
     width: 28rem;
-    border:none;
-    padding:1rem !important;
+    border: none;
+    padding: 1rem !important;
     margin-left: 0.3rem;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
-.left-icon{
-    color:white;
+
+.left-icon {
+    color: white;
     font-size: 2.5rem;
 }
 
-.form-menu-icon{
-    color:white;
+.form-menu-icon {
+    color: white;
     font-size: 3rem;
     position: absolute;
     left: 93%;
 }
 
-.form-group-kk .valid-feedback{
-    margin-left:-23.2rem;
-    text-align: center;
-    margin-top: -1rem;
-    margin-bottom: 1rem;
-}
-.form-group-kk .invalid-feedback{
-    margin-left:-19rem;
+.form-group-kk .valid-feedback {
+    margin-left: -23.2rem;
     text-align: center;
     margin-top: -1rem;
     margin-bottom: 1rem;
 }
 
-.male{
+.form-group-kk .invalid-feedback {
+    margin-left: -19rem;
+    text-align: center;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+
+.male {
     width: 27rem;
     height: 5rem;
     font-size: 1.9rem;
@@ -144,7 +156,8 @@
     margin-left: 2.5rem;
 
 }
-.female{
+
+.female {
     width: 27rem;
     height: 5rem;
     font-size: 1.9rem;
@@ -154,39 +167,221 @@
     margin-left: 1rem;
 }
 
-.male label, .female label{
+.male label,
+.female label {
     text-align: center;
 }
-.form-group-kk input[type=checkbox], input[type=radio]{
+
+.form-group-kk input[type=checkbox],
+input[type=radio] {
     appearance: none !important;
 }
 
-.form-kk input[type=checkbox], input[type=radio]{
+.form-kk input[type=checkbox],
+input[type=radio] {
     appearance: none !important;
 }
 
-.select-selector{
-    margin:1rem auto 2rem auto;
+.select-selector {
+    margin: 1rem auto 2rem auto;
     width: 56.5rem;
     border-radius: 7px;
     background-color: black !important;
 }
 
-.css-1g48xl4-IndicatorsContainer{
+.css-1g48xl4-IndicatorsContainer {
     opacity: 0;
 }
 
-.css-1uccc91-singleValue{
+.css-1uccc91-singleValue {
     color: #69B5D2 !important;
     font-size: 1.9rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.css-m8q1j8-control{
+.css-m8q1j8-control {
     border-width: 3px !important;
     outline: none;
 }
 
-.css-1sflke2-menu{
+.css-1sflke2-menu {
     font-size: 1.9rem;
+}
+
+@media (min-width: 1280px) {
+    .navbar-kk {
+        height: 6rem !important;
+    }
+
+    .form-menu-icon {
+        font-size: 2.5rem !important;
+    }
+
+    .form-kk {
+        width: 40%;
+        height: 100%;
+        font-size: 1rem !important;
+        padding: 2rem 0 0 2rem;
+        background-color: #EDF5F8;
+        margin: 2.8rem auto;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px 2px rgba(173, 171, 171, 0.8);
+    }
+
+    .form-group-kk label {
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .form-kk .input-kk {
+        margin-left: 0.5rem;
+        font-size: 14px !important;
+        height: 1px !important;
+        padding: 1.5rem !important;
+        border: 2px solid #69B5D2;
+        border-radius: 0;
+    }
+
+    .form-kk .input-kk::-webkit-input-placeholder {
+        font-size: 0.95rem !important;
+        color: #69B5D2;
+        font-style: italic;
+    }
+
+    .kk-button-wrapper .male,
+    .kk-button-wrapper .female {
+        width: 16.5rem !important;
+        height: 3.5rem !important;
+    }
+
+    .kk-button-wrapper {
+        margin-left: -2rem;
+    }
+
+    .form-group-kk select {
+        width: 34rem !important;
+        margin-left: 0.5rem;
+        margin-top: 0rem !important;
+    }
+
+
+    .form-group-kk .btn {
+        margin-left: 0.3rem !important;
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+        height: 4rem !important;
+        font-size: 1rem !important;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .form-group-kk .invalid-feedback {
+        margin-left: -10rem !important;
+    }
+
+    .form-group-kk .valid-feedback {
+        margin-left: -13rem !important;
+    }
+
+
+}
+
+@media (min-width:900px) {
+    .navbar-kk {
+        height: 6rem !important;
+    }
+
+    .brand-kk {
+        font-size: 1.8rem !important;
+    }
+
+    .left-icon {
+        font-size: 2rem;
+    }
+
+    .form-menu-icon {
+        font-size: 2.5rem !important;
+    }
+
+    .form-group-kk {
+        margin: auto;
+        margin-left: 0.4rem;
+    }
+
+    .form-kk label {
+        font-size: 1.25rem;
+    }
+
+    .form-kk .input-kk::-webkit-input-placeholder {
+        font-size: 1.25rem !important;
+    }
+
+    .form-kk .input-kk {
+        height: 2.3rem !important;
+        margin-top: 0.5rem;
+        font-size: 1.5rem !important;
+    }
+
+    .kk-button-wrapper .male {
+        height: 4.5rem;
+    }
+
+    .kk-button-wrapper .female {
+        height: 4.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .male label,
+    .female label {
+        margin: auto;
+    }
+
+    .form-group-kk select {
+        height: 3.5rem !important;
+        margin-top: 0.5rem;
+        font-size: 1.25rem !important;
+        width: 55.5rem;
+        font-style: italic;
+    }
+
+    .form-group-kk .btn {
+        height: 4rem;
+        margin-bottom: 4rem;
+        font-size: 1.25rem !important;
+    }
+
+    .form-group-kk .invalid-feedback {
+        margin-left: -21rem;
+        font-size: 1.25rem;
+    }
+
+    .form-group-kk .valid-feedback {
+        margin-left: -24rem;
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .kk-button-wrapper .male,
+    .kk-button-wrapper .female {
+        height: 4rem;
+        width: 28.5rem;
+    }
+
+    .male label,
+    .female label {
+        margin: auto;
+        font-size: 1.25rem;
+        margin-top: -0.5rem;
+    }
+
+    .form-group-kk select {
+        width: 58.5rem;
+    }
+
+    .form-group-kk .btn {
+        height: 4rem;
+        font-size: 1.25rem !important;
+    }
 }

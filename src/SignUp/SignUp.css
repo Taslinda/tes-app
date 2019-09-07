@@ -10,20 +10,26 @@
     background-position: center center;
     background-size: cover;
 }
-.title-regis{
+
+.title-regis {
     margin-top: 12rem !important;
     margin-left: 11em !important;
 }
-.form-group-regis .username-regis, .email-regis, .password-regis{
+
+.form-group-regis .username-regis,
+.email-regis,
+.password-regis {
     margin: 10px;
 }
-.is-danger-regis{
+
+.is-danger-regis {
     font-size: 1.5rem;
-    color:white;
+    color: white;
     margin-left: 0rem;
     margin-top: 7px;
 }
-.title-regis p{
+
+.title-regis p {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
@@ -49,8 +55,9 @@
     border: none;
     margin-bottom: -5px;
 }
+
 .form-group-regis input::-webkit-input-placeholder {
-    color:#005083;
+    color: #005083;
     font-size: 1.7rem;
 }
 
@@ -64,7 +71,7 @@
     font-size: 2rem;
     color: #ffffff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border:none;
+    border: none;
     border-radius: 10px;
 }
 
@@ -77,53 +84,70 @@
 
 }
 
-.text-bold{
+.text-bold {
     font-weight: bold;
 }
 
-.form-group-regis .invalid-feedback{
+.form-group-regis .invalid-feedback {
     margin-top: 10px;
     margin-left: -2rem;
-    color:white;
-}
-.form-group-regis .valid-feedback{
-    margin-top: 10px;
-    margin-left: -2rem;
-    color:white;
+    color: white;
 }
 
-@media (min-width:900px){
+.form-group-regis .valid-feedback {
+    margin-top: 10px;
+    margin-left: -2rem;
+    color: white;
+}
+
+@media (min-width:900px) {
     .regis-form {
         background-image: url(./background.png);
         background-color: #005083;
         width: 100%;
-        height: 150vh;
+        height: 190vh;
         margin-top: -2rem !important;
         position: absolute;
         background-size: cover;
         background-position: center center;
         background-attachment: fixed;
     }
-    .form-group-regis .invalid-feedback{
+
+    .form-group-regis .invalid-feedback {
         margin-top: 10px;
         margin-left: 0rem;
         font-size: 1.2rem;
-        color:white;
+        color: white;
     }
-    .form-group-regis .valid-feedback{
+
+    .form-group-regis .valid-feedback {
         margin-top: 10px;
         margin-left: 0rem;
         font-size: 1.2rem;
-        color:white;
+        color: white;
+    }
+
+    .form-group-regis input {
+        width: 42rem !important;
+        height: 1rem !important;
+        margin-left: -1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        color: #0C3265;
+        border: none;
+        margin-bottom: -7px;
+        padding: 3rem !important;
+        padding-left: 2rem !important;
+        font-size: 2rem !important;
     }
 }
 
-@media (min-width:1024px){
+@media (min-width:1024px) {
     .regis-app {
-        background-image: url(../SignUp/background.png);
+        background-image: url(./background.png);
         opacity: 20%;
         width: 100%;
-        height: 100vh;
+        height: 133vh;
         padding-top: 2.5rem;
         background-repeat: no-repeat;
         position: relative;
@@ -131,64 +155,68 @@
         background-position: center center;
         background-size: cover;
     }
-    
+
     .regis-form {
-        background-image: url(./background.png);
+        background: url(./background.png);
         background-color: #005083;
         width: 30rem;
         height: 50rem;
         margin-top: 2rem !important;
         margin-bottom: 3.5rem;
-        margin-left:18rem;
+        margin-left: 18rem;
         position: absolute;
         background-size: cover;
     }
-    
+
     .title-regis {
         margin-top: 6em !important;
         margin-left: 5em !important;
     }
 
-    .title-regis p{
+    .title-regis p {
         font-size: 3rem;
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
         text-align: left;
         color: #ffffff;
     }
-    .is-danger-regis{
+
+    .is-danger-regis {
         font-size: 12px;
         margin-top: 7px;
-        color:white;
+        color: white;
         margin-left: -1rem;
         margin-bottom: -5px;
     }
+
     .form-group-regis {
         margin-top: 5rem;
         text-align: left;
         margin-left: 5rem;
     }
-    
+
     .form-group-regis input {
         width: 21rem !important;
         height: 1rem !important;
         margin-left: -1rem;
-        padding-left: 10px !important;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 12px !important;
         font-weight: 300;
         color: #0C3265;
         border: none;
         margin-bottom: -7px;
+        padding: 1.7rem !important;
+        padding-left: 10px !important;
     }
+
     .form-group-regis input::-webkit-input-placeholder {
         padding-left: 5px !important;
-        color:#005083;
+        color: #005083;
         font-size: 12px !important;
     }
-    
+
     .regis .button-regis {
-        margin-top: 3rem !important;
+        margin-top: 6rem !important;
         margin-left: -0.4rem !important;
         width: 21rem;
         height: 3rem;
@@ -197,33 +225,37 @@
         font-size: 16px;
         color: #ffffff;
         font-family: Arial, Helvetica, sans-serif;
-        border:none;
+        border: none;
         border-radius: 5px;
     }
-    
+
     .login-regis-page p {
         color: #ffffff;
         margin-left: -0.3rem !important;
         font-size: 11px;
         margin-top: 0.75rem;
-    
     }
-    .text-bold{
+
+    .text-bold {
         font-weight: bold;
     }
-    .form-group-regis .invalid-feedback{
+
+    .form-group-regis .invalid-feedback {
         margin-top: 10px;
         margin-left: -1rem;
-        color:white;
+        color: white;
+        font-size: 1rem;
     }
-    .form-group-regis .valid-feedback{
+
+    .form-group-regis .valid-feedback {
         margin-top: 10px;
         margin-left: -1rem !important;
-        color:white;
+        color: white;
+        font-size: 1rem;
     }
 }
 
-@media (min-width:1280px){
+@media (min-width:1280px) {
     .regis-app {
         background: url(./background.png);
         opacity: 20%;
@@ -236,29 +268,32 @@
         background-position: center center;
         background-size: cover;
     }
-    
+
     .regis-form {
         background: url(./background.png);
-        background-color: #005083;  
+        background-color: #005083;
         width: 24rem;
         height: 46rem;
-        margin-top: 4rem !important;
-        margin-bottom: 3.5rem;
-        margin-left:32rem;
         background-size: cover;
+        margin: auto;
+        margin-top: -0.9rem !important;
+        margin-left: 38rem;
     }
-    .is-danger-regis{
+
+    .is-danger-regis {
         font-size: 12px;
-        color:white;
+        color: white;
         margin-left: -2rem;
         margin-bottom: -5px;
     }
+
     .title-regis {
         margin-top: 4rem !important;
         text-align: left !important;
         margin-left: 4rem !important;
     }
-    .title-regis p{
+
+    .title-regis p {
         font-size: 2.8rem;
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
@@ -266,10 +301,10 @@
         color: #ffffff;
     }
 
-    .form-group-regis{
+    .form-group-regis {
         margin-top: 4rem;
     }
-    
+
     .form-group-regis input {
         width: 17rem !important;
         height: 3rem !important;
@@ -278,14 +313,15 @@
         font-size: 12px !important;
         color: #0C3265;
         border: none;
-        margin-bottom: -8px !important  ;   
+        margin-bottom: -8px !important;
     }
 
     .form-group-regis input::-webkit-input-placeholder {
-        color:#005083;
+        color: #005083;
         font-size: 12px !important;
+        padding: 1rem !important;
     }
-    
+
     .regis .button-regis {
         margin-top: 2rem !important;
         margin-left: -1.7rem !important;
@@ -296,10 +332,10 @@
         font-size: 13px;
         color: #ffffff;
         font-family: Arial, Helvetica, sans-serif;
-        border:none;
+        border: none;
         border-radius: 5px;
     }
-    
+
     .login-regis-page p {
         color: #ffffff;
         margin-left: -1.5rem !important;
@@ -307,17 +343,294 @@
         margin-top: 0.75rem;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
-    .text-bold{
+
+    .text-bold {
         font-weight: bold;
     }
-    .form-group-regis .invalid-feedback{
+
+    .form-group-regis .invalid-feedback {
         margin-top: 10px;
         margin-left: -2rem;
-        color:white;
+        color: white;
     }
-    .form-group-regis .valid-feedback{
+
+    .form-group-regis .valid-feedback {
+        margin-top: 10px;
+        color: white;
+        font-size: 1rem;
+        margin-left: -2rem !important;
+
+    }
+}
+
+@media (min-width:900px) {
+    .regis-form {
+        background-image: url(./background.png);
+        background-color: #005083;
+        width: 100%;
+        height: 190vh;
+        margin-top: -2rem !important;
+        position: absolute;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+
+    .form-group-regis .invalid-feedback {
+        margin-top: 10px;
+        margin-left: 0rem;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .form-group-regis .valid-feedback {
+        margin-top: 10px;
+        margin-left: 0rem;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .form-group-regis input {
+        width: 42rem !important;
+        height: 1rem !important;
+        margin-left: -1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        color: #0C3265;
+        border: none;
+        margin-bottom: -7px;
+        padding: 3rem !important;
+        padding-left: 1rem !important;
+        font-size: 2rem !important;
+    }
+
+    .form-group-regis input::-webkit-input-placeholder {
+        font-size: 1.6rem !important;
+    }
+
+    .login-regis-page p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width:1024px) {
+    .regis-app {
+        background-image: url(./background.png);
+        opacity: 20%;
+        width: 100%;
+        height: 133vh;
+        padding-top: 2.5rem;
+        background-repeat: no-repeat;
+        position: relative;
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .regis-form {
+        background: url(./background.png);
+        background-color: #005083;
+        width: 30rem;
+        height: 50rem;
+        margin-top: 2rem !important;
+        margin-bottom: 3.5rem;
+        margin-left: 18rem;
+        position: absolute;
+        background-size: cover;
+    }
+
+    .title-regis {
+        margin-top: 6em !important;
+        margin-left: 5em !important;
+    }
+
+    .title-regis p {
+        font-size: 3rem;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        color: #ffffff;
+    }
+
+    .is-danger-regis {
+        font-size: 12px;
+        margin-top: 7px;
+        color: white;
+        margin-left: -1rem;
+        margin-bottom: -5px;
+    }
+
+    .form-group-regis {
+        margin-top: 5rem;
+        text-align: left;
+        margin-left: 5rem;
+    }
+
+    .form-group-regis input {
+        width: 21rem !important;
+        height: 1rem !important;
+        margin-left: -1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem !important;
+        font-weight: 300;
+        color: #0C3265;
+        border: none;
+        margin-bottom: -7px;
+        padding: 1.7rem !important;
+        padding-left: 1rem !important;
+    }
+
+    .form-group-regis input::-webkit-input-placeholder {
+        padding-left: 0rem !important;
+        color: #005083;
+        font-size: 12px !important;
+    }
+
+    .regis .button-regis {
+        margin-top: 6rem !important;
+        margin-left: -0.4rem !important;
+        width: 21rem;
+        height: 3rem;
+        border: none;
+        background-color: #1BAEC9;
+        font-size: 16px;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .login-regis-page p {
+        color: #ffffff;
+        margin-left: -0.3rem !important;
+        font-size: 11px;
+        margin-top: 0.75rem;
+    }
+
+    .text-bold {
+        font-weight: bold;
+    }
+
+    .form-group-regis .invalid-feedback {
+        margin-top: 10px;
+        margin-left: -1rem;
+        color: white;
+        font-size: 14px;
+    }
+
+    .form-group-regis .valid-feedback {
+        color: white;
+        font-size: 14px;
+    }
+}
+
+@media (min-width:1280px) {
+    .regis-app {
+        background: url(./background.png);
+        opacity: 20%;
+        width: 100%;
+        height: 100vh;
+        padding-top: 2.5rem;
+        background-repeat: no-repeat;
+        position: fixed;
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .regis-form {
+        background: url(./background.png);
+        background-color: #005083;
+        width: 24rem;
+        height: 46rem;
+        background-size: cover;
+        margin: auto;
+        margin-top: -0.9rem !important;
+        margin-left: 38rem;
+    }
+
+    .is-danger-regis {
+        font-size: 12px;
+        color: white;
+        margin-left: -2rem;
+        margin-bottom: -5px;
+    }
+
+    .title-regis {
+        margin-top: 4rem !important;
+        text-align: left !important;
+        margin-left: 4rem !important;
+    }
+
+    .title-regis p {
+        font-size: 2.8rem;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        color: #ffffff;
+    }
+
+    .form-group-regis {
+        margin-top: 4rem;
+    }
+
+    .form-group-regis input {
+        width: 17rem !important;
+        height: 3rem !important;
+        margin-left: -2.2rem !important;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem !important;
+        color: #0C3265;
+        border: none;
+        margin-bottom: -8px !important;
+        padding: 1.5rem !important;
+        padding-left: 1rem !important;
+    }
+
+    .form-group-regis input::-webkit-input-placeholder {
+        color: #005083;
+        font-size: 12px !important;
+        padding: 0rem !important;
+    }
+
+    .regis .button-regis {
+        margin-top: 7rem !important;
+        margin-left: -1.7rem !important;
+        width: 17rem;
+        height: 3rem;
+        border: none;
+        background-color: #1BAEC9;
+        font-size: 13px;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .login-regis-page p {
+        color: #ffffff;
+        margin-left: -1.5rem !important;
+        font-size: 12px;
+        margin-top: 0.75rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .text-bold {
+        font-weight: bold;
+    }
+
+    .form-group-regis .invalid-feedback {
         margin-top: 10px;
         margin-left: -2rem;
-        color:white;
+        color: white;
+        font-size: 12px;
+    }
+
+    .form-group-regis .valid-feedback {
+        margin-top: 10px;
+        color: white;
+        font-size: 12px !important;
+        margin-left: -2rem !important;
+
     }
 }

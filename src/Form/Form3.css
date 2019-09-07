@@ -1,33 +1,33 @@
-body{
+body {
     background-color: #EDF5F8;
 }
 
 
 /* FORM CONTENT */
-.form-page-content2{
+.form-page-content2 {
     font-size: 2.2rem;
     padding-top: 2rem;
     background-color: #EDF5F8;
     height: 115vh;
 }
 
-.form-page-content2 .input-text2{
+.form-page-content2 .input-text2 {
     font-size: 2rem !important;
     background-color: #EDF5F8;
-    border: 3px solid #69B5D2; 
+    border: 3px solid #69B5D2;
     border-radius: 7px;
-    color : #69B5D2;
+    color: #69B5D2;
     padding: 2.5rem;
     margin: 1.5rem auto;
 }
 
-.form-page-content2 .input-text2::-webkit-input-placeholder{
-    color : #69B5D2;
+.form-page-content2 .input-text2::-webkit-input-placeholder {
+    color: #69B5D2;
     font-style: italic;
     font-size: 1.7rem !important;
 }
 
-.form-page-content2 button{
+.form-page-content2 button {
     background-color: #1BAEC9;
     color: white;
     padding: 1rem !important;
@@ -37,71 +37,74 @@ body{
     font-size: 2rem !important;
 }
 
-.form-page-content2 label{
+.form-page-content2 label {
     display: block !important;
     text-align: left;
     margin-left: 2.5rem;
     font-size: 1.8rem !important;
 }
 
-.form-page-content2 .btn2{
+.form-page-content2 .btn2 {
     margin-left: 1.2em;
 
 }
-.form-page-content2 .invalid-feedback{
+
+.form-page-content2 .invalid-feedback {
     margin-top: -1rem;
     margin-left: -20.4rem !important;
     font-size: 1.5rem !important;
     margin-bottom: 1.5rem;
     text-align: center;
 }
-.form-page-content2 .valid-feedback{
+
+.form-page-content2 .valid-feedback {
     margin-top: -1rem !important;
     margin-left: -23.5rem !important;
     font-size: 1.5rem !important;
     margin-bottom: 1.5rem !important;
     text-align: center;
 }
-@media (min-width:900px){
-    .form-page-content2{
+
+@media (min-width:900px) {
+    .form-page-content2 {
         font-size: 1.3rem;
-        /* padding: 2rem 8rem 0 8rem; */
         background-color: #EDF5F8;
         height: 110vh;
     }
-    
-    .form-page-content2 .input-text{
+
+    .form-page-content2 .input-text {
         font-size: 1.3rem;
         background-color: #EDF5F8;
-        border: 2px solid #69B5D2; 
+        border: 2px solid #69B5D2;
         border-radius: 7px;
-        color : #69B5D2;
+        color: #69B5D2;
         padding: 1.5rem;
         width: 92%;
     }
-    .form-page-content2 .input-text2{
-        font-size: 1.3rem;
+
+    .form-page-content2 .input-text2 {
+        font-size: 1.5rem !important;
         background-color: #EDF5F8;
-        border: 2px solid #69B5D2; 
+        border: 2px solid #69B5D2;
         border-radius: 7px;
-        color : #69B5D2;
+        color: #69B5D2;
         padding: 1.5rem;
         width: 92%;
     }
-    
-    .form-page-content2 .input-text::-webkit-input-placeholder{
-        color : #69B5D2;
+
+    .form-page-content2 .input-text::-webkit-input-placeholder {
+        color: #69B5D2;
         font-style: italic;
         font-size: 1.2rem;
     }
-    
-    .form-page-content2 .input-text2::-webkit-input-placeholder{
-        color : #69B5D2;
+
+    .form-page-content2 .input-text2::-webkit-input-placeholder {
+        color: #69B5D2;
         font-style: italic;
-        font-size: 1.2rem;
+        font-size: 1.4rem !important;
     }
-    
-    .form-page-content2 button{
+
+    .form-page-content2 button {
         background-color: #1BAEC9;
         color: white;
         padding: 0.5rem;
@@ -110,88 +113,95 @@ body{
         border-radius: 5px;
         font-size: 1.2rem;
     }
-    
-    .form-page-content2 label{
+
+    .form-page-content2 label {
         display: block !important;
         margin-bottom: -1rem !important;
         margin-left: 2.8rem;
+        font-size: 1.5rem !important;
     }
-    
-    .form-page-content2 .btn2{
+
+    .form-page-content2 .btn2 {
         margin-left: 4%;
+        height: 4rem;
+        font-size: 1.5rem !important;
+        margin-bottom: 2.5rem;
+        margin-top: 2.5rem;
     }
-    /* .form-page-content2 .invalid-feedback{
-        margin-top: -1rem;
-        font-size: 14px;
-        margin-left: -23.5rem;
-        text-align: center;
-        margin-bottom: 1.5rem;
-    
+
+    .form-page-content2 .invalid-feedback {
+        margin-left: -19rem;
     }
-    .form-page-content2 .valid-feedback{
-        margin-top: -1rem;
-        font-size: 14px;
-        margin-left: -25.5rem;
-        margin-bottom: 1.5rem;
-    } */
+
+    .form-page-content2 .valid-feedback {
+        margin-left: -23rem;
+    }
 }
 
-@media (min-width:1280px){
-    .form-page-content2{
+@media (min-width: 1024px) {
+    .form-page-content2 .btn2 {
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
+
+    .form-page-content2 .invalid-feedback {
+        margin-left: -20rem !important;
+    }
+
+    .form-page-content2 .valid-feedback {
+        margin-left: -24rem !important;
+    }
+}
+
+@media (min-width:1280px) {
+    .form-page-content2 {
         width: 40%;
         font-size: 1rem;
-        padding : 2rem 0 0 2rem;
+        padding: 2rem 0 0 2rem;
         background-color: #EDF5F8;
         height: 105vh !important;
         margin: 2.8rem auto;
         border-radius: 10px;
         box-shadow: 0px 5px 20px 2px rgba(173, 171, 171, 0.8);
     }
-    
-    .form-page-content2 .input-text{
+
+    .form-page-content2 .input-text {
         font-size: 14px;
         background-color: #EDF5F8;
-        border: 2px solid #69B5D2; 
+        border: 2px solid #69B5D2;
         border-radius: 3px;
-        color : #69B5D2;
+        color: #69B5D2;
         padding: 1rem !important;
         width: 120%;
-        margin-left: 0rem;
-        margin-right: -5rem;
-    }
-    .form-page-content2 .input-text2{
-        font-size: 14px;
-        background-color: #EDF5F8;
-        border: 2px solid #69B5D2; 
-        border-radius: 3px;
-        color : #69B5D2;
-        padding: 1rem !important;
-        width: 120%;
-        margin-left: 0rem;
+        margin-left: 0.6rem;
         margin-right: -5rem;
     }
 
+    .form-page-content2 .input-text2 {
+        font-size: 1.5rem !important;
+        background-color: #EDF5F8;
+        border: 2px solid #69B5D2;
+        border-radius: 3px;
+        color: #69B5D2;
+        padding: 1rem !important;
+        width: 120%;
+        margin-left: 0.6rem;
+        margin-right: -5rem;
+    }
 
-    /* .invalid-feedback{
-        margin-top: -1rem;
-        margin-bottom: 1.5rem;
-        text-align: center !important;
-        margin-left: -8.75rem;
-        color: red;
-    } */
-    
-    .form-page-content2 .input-text::-webkit-input-placeholder{
-        color : #69B5D2;
-        font-style: italic; 
-        font-size:14px !important;
+    .form-page-content2 .input-text::-webkit-input-placeholder {
+        color: #69B5D2;
+        font-style: italic;
+        font-size: 14px !important;
     }
-    .form-page-content2 .input-text2::-webkit-input-placeholder{
-        color : #69B5D2;
-        font-style: italic; 
-        font-size:14px !important;
+
+    .form-page-content2 .input-text2::-webkit-input-placeholder {
+        color: #69B5D2;
+        font-style: italic;
+        font-size: 1.3rem !important;
     }
-    
-    .form-page-content2 button{
+
+    .form-page-content2 button {
         background-color: #1BAEC9;
         color: white;
         padding: 0.5rem;
@@ -201,35 +211,37 @@ body{
         border-radius: 5px;
         font-size: 15px;
     }
-    
-    .form-page-content2 label{
+
+    .form-page-content2 label {
         text-align: left;
-        margin-left: 0rem;
+        margin-left: 0.6rem;
         margin-bottom: -1rem;
         font-size: 1rem;
     }
-    .form-page-content2 .btn2{
+
+    .form-page-content2 .btn2 {
         width: 92%;
-        margin-left: 0rem !important;
+        height: 3.8rem !important;
+        font-size: 1.3rem !important;
+        margin-left: 0.6rem !important;
     }
 
-    .form-page-group{
+    .form-page-group {
         text-align: left;
     }
-    .form-page-content2 .invalid-feedback{
+
+    .form-page-content2 .invalid-feedback {
         margin-top: -1rem;
-        margin-left: 0rem !important;
-        font-size: 12px;
+        margin-left: -10rem !important;
+        font-size: 1.4rem !important;
         margin-bottom: 1.5rem;
     }
-    .form-page-content2 .valid-feedback{
+
+    .form-page-content2 .valid-feedback {
         margin-top: -1rem;
-        margin-left: 0rem !important;
-        font-size: 12px;
+        margin-left: -13rem !important;
+        font-size: 1.4rem !important;
         margin-bottom: 1.5rem;
     }
-    
+
 }
-
-/* RESPONSIVE */
-
