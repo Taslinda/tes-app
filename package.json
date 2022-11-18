@@ -26,7 +26,7 @@
     "react-native-vector-icons": "^6.6.0",
     "react-progressbar": "^15.4.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "react-select": "^3.0.4",
     "reactstrap": "^8.0.1",
     "styled-components": "^4.2.0"
